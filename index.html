@@ -681,6 +681,380 @@
             margin-bottom: 20px;
             letter-spacing: -0.025em;
         }
+        
+        /* Apple-inspired Mobile Section Styling */
+        .mobile-section {
+            animation: fadeInUp 0.8s ease-out both;
+            margin-bottom: 40px;
+        }
+        
+        .mobile-section-header {
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        
+        .mobile-section-title {
+            font-size: 1.375rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 12px;
+            letter-spacing: -0.05em;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .mobile-section-divider {
+            width: 48px;
+            height: 3px;
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #ec4899 100%);
+            margin: 0 auto;
+            border-radius: 2px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .mobile-section-divider::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+            animation: shimmer 2s infinite;
+        }
+        
+        /* Experience Item Styling */
+        .mobile-experience-item {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 
+                0 2px 12px rgba(0, 0, 0, 0.04),
+                0 0 0 1px rgba(79, 70, 229, 0.04);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            animation: slideInLeft 0.6s ease-out both;
+        }
+        
+        .mobile-experience-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            transition: width 0.3s ease;
+        }
+        
+        .mobile-experience-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 
+                0 12px 32px rgba(79, 70, 229, 0.12),
+                0 0 0 1px rgba(79, 70, 229, 0.08);
+            border-color: #c7d2fe;
+        }
+        
+        .mobile-experience-item:hover::before {
+            width: 100%;
+            opacity: 0.05;
+        }
+        
+        .mobile-experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+        
+        .mobile-experience-company {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            flex: 1;
+        }
+        
+        .mobile-company-logo {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.125rem;
+            flex-shrink: 0;
+            box-shadow: 
+                0 4px 12px rgba(79, 70, 229, 0.25),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-experience-item:hover .mobile-company-logo {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 
+                0 8px 24px rgba(79, 70, 229, 0.35),
+                0 0 0 1px rgba(255, 255, 255, 0.2);
+        }
+        
+        .mobile-company-info {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .mobile-role-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 4px;
+            letter-spacing: -0.025em;
+            line-height: 1.3;
+        }
+        
+        .mobile-company-name {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #4f46e5;
+            margin-bottom: 4px;
+            letter-spacing: -0.01em;
+        }
+        
+        .mobile-duration {
+            font-size: 0.8125rem;
+            color: #64748b;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+        
+        .mobile-experience-badge {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.025em;
+            text-transform: uppercase;
+            box-shadow: 
+                0 2px 8px rgba(16, 185, 129, 0.25),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            flex-shrink: 0;
+            animation: bounceIn 0.6s ease-out both;
+        }
+        
+        .mobile-experience-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .mobile-achievement-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            space-y: 8px;
+        }
+        
+        .mobile-achievement-list li {
+            font-size: 0.875rem;
+            color: #475569;
+            line-height: 1.6;
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .mobile-achievement-list li::before {
+            content: '◦';
+            position: absolute;
+            left: 0;
+            color: #4f46e5;
+            font-weight: 700;
+            font-size: 1.25rem;
+            line-height: 1;
+            top: -2px;
+        }
+        
+        /* Education Item Styling */
+        .mobile-education-item {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 
+                0 2px 12px rgba(0, 0, 0, 0.04),
+                0 0 0 1px rgba(79, 70, 229, 0.04);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            animation: slideInRight 0.6s ease-out both;
+        }
+        
+        .mobile-education-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(135deg, #ec4899 0%, #f97316 100%);
+            transition: width 0.3s ease;
+        }
+        
+        .mobile-education-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 
+                0 12px 32px rgba(236, 72, 153, 0.12),
+                0 0 0 1px rgba(236, 72, 153, 0.08);
+            border-color: #fce7f3;
+        }
+        
+        .mobile-education-item:hover::before {
+            width: 100%;
+            opacity: 0.05;
+        }
+        
+        .mobile-education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+        
+        .mobile-education-institution {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            flex: 1;
+        }
+        
+        .mobile-institution-logo {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, #ec4899 0%, #f97316 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.125rem;
+            flex-shrink: 0;
+            box-shadow: 
+                0 4px 12px rgba(236, 72, 153, 0.25),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-education-item:hover .mobile-institution-logo {
+            transform: scale(1.1) rotate(-5deg);
+            box-shadow: 
+                0 8px 24px rgba(236, 72, 153, 0.35),
+                0 0 0 1px rgba(255, 255, 255, 0.2);
+        }
+        
+        .mobile-institution-info {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .mobile-degree-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 4px;
+            letter-spacing: -0.025em;
+            line-height: 1.3;
+        }
+        
+        .mobile-specialization {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #ec4899;
+            margin-bottom: 4px;
+            letter-spacing: -0.01em;
+        }
+        
+        .mobile-institution-name {
+            font-size: 0.875rem;
+            color: #475569;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+        
+        .mobile-graduation-year {
+            font-size: 0.8125rem;
+            color: #64748b;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+        
+        .mobile-education-badge {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.025em;
+            text-transform: uppercase;
+            box-shadow: 
+                0 2px 8px rgba(59, 130, 246, 0.25),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            flex-shrink: 0;
+            animation: bounceIn 0.6s ease-out both;
+        }
+        
+        .mobile-education-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .mobile-education-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        
+        .mobile-highlight-pill {
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            color: #475569;
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.025em;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-highlight-pill:hover {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+        }
+        
+        /* Animation Delays */
+        .mobile-experience-item:nth-child(1) { animation-delay: 0.1s; }
+        .mobile-experience-item:nth-child(2) { animation-delay: 0.2s; }
+        .mobile-experience-item:nth-child(3) { animation-delay: 0.3s; }
+        .mobile-experience-item:nth-child(4) { animation-delay: 0.4s; }
+        
+        .mobile-education-item:nth-child(1) { animation-delay: 0.1s; }
+        .mobile-education-item:nth-child(2) { animation-delay: 0.2s; }
+        
+        /* Shimmer Animation */
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
     </style>
     
     <!-- Simple device detection for debugging -->
@@ -736,6 +1110,104 @@
                 </div>
             </section>
             
+            <section class="mobile-section" style="margin-bottom: 40px;">
+                <div class="mobile-section-header">
+                    <h3 class="mobile-section-title">Professional Experience</h3>
+                    <div class="mobile-section-divider"></div>
+                </div>
+                
+                <div class="mobile-experience-item">
+                    <div class="mobile-experience-header">
+                        <div class="mobile-experience-company">
+                            <div class="mobile-company-logo">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="mobile-company-info">
+                                <h4 class="mobile-role-title">AI Software Developer</h4>
+                                <p class="mobile-company-name">Timeless Soft GmbH</p>
+                                <p class="mobile-duration">June 2025 – Present • Vienna, Austria</p>
+                            </div>
+                        </div>
+                        <div class="mobile-experience-badge">Current</div>
+                    </div>
+                    <div class="mobile-experience-content">
+                        <ul class="mobile-achievement-list">
+                            <li>Developed the "e-novations" project backend algorithm for EV charging tariffs</li>
+                            <li>Built AI application using LLM to identify potential customers</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mobile-experience-item">
+                    <div class="mobile-experience-header">
+                        <div class="mobile-experience-company">
+                            <div class="mobile-company-logo">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <div class="mobile-company-info">
+                                <h4 class="mobile-role-title">AI Software Developer (Internship)</h4>
+                                <p class="mobile-company-name">Treetop Medical GmbH</p>
+                                <p class="mobile-duration">July 2024 – September 2024 • Vienna, Austria</p>
+                            </div>
+                        </div>
+                        <div class="mobile-experience-badge">Internship</div>
+                    </div>
+                    <div class="mobile-experience-content">
+                        <ul class="mobile-achievement-list">
+                            <li>Reviewed and optimized existing codebase</li>
+                            <li>Developed Streamlit application for project visualization</li>
+                            <li>Implemented LLM-based solutions for data extraction</li>
+                            <li>Trained multi-class classification tasks using HuggingFace</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mobile-experience-item">
+                    <div class="mobile-experience-header">
+                        <div class="mobile-experience-company">
+                            <div class="mobile-company-logo">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div class="mobile-company-info">
+                                <h4 class="mobile-role-title">Technical Support</h4>
+                                <p class="mobile-company-name">Manaseer Group</p>
+                                <p class="mobile-duration">August 2022 – September 2023 • Amman, Jordan</p>
+                            </div>
+                        </div>
+                        <div class="mobile-experience-badge">Full-time</div>
+                    </div>
+                    <div class="mobile-experience-content">
+                        <ul class="mobile-achievement-list">
+                            <li>Software and hardware support, Microsoft Office troubleshooting</li>
+                            <li>Hardware diagnostics and component replacement</li>
+                            <li>Printer maintenance and camera installations</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mobile-experience-item">
+                    <div class="mobile-experience-header">
+                        <div class="mobile-experience-company">
+                            <div class="mobile-company-logo">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="mobile-company-info">
+                                <h4 class="mobile-role-title">CTO & Lead Developer</h4>
+                                <p class="mobile-company-name">AIKA Startup Company</p>
+                                <p class="mobile-duration">June 2025 – Present • Austria</p>
+                            </div>
+                        </div>
+                        <div class="mobile-experience-badge">Leadership</div>
+                    </div>
+                    <div class="mobile-experience-content">
+                        <ul class="mobile-achievement-list">
+                            <li>Designed LLM-powered application with RAG for semantic search</li>
+                            <li>Developed frontend with TypeScript and backend with Python</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
             <section>
                 <h3>Featured Projects</h3>
                 <div class="mobile-projects">
@@ -762,69 +1234,56 @@
                 </div>
             </section>
             
-            <section style="margin-bottom: 30px; text-align: left;">
-                <h3>Professional Experience</h3>
-                <div style="margin-bottom: 20px;">
-                    <div style="font-size: 0.9rem; color: #1e293b; line-height: 1.5; margin-bottom: 10px;">
-                        <strong>AI Software Developer</strong> at Timeless Soft GmbH<br>
-                        <em style="color: #4f46e5;">June 2025 – Present, Vienna, Austria</em>
-                    </div>
-                    <ul style="font-size: 0.8rem; color: #64748b; margin-left: 20px; margin-bottom: 15px;">
-                        <li>Developed the "e-novations" project backend algorithm for EV charging tariffs</li>
-                        <li>Built AI application using LLM to identify potential customers</li>
-                    </ul>
+            <section class="mobile-section" style="margin-bottom: 40px;">
+                <div class="mobile-section-header">
+                    <h3 class="mobile-section-title">Education</h3>
+                    <div class="mobile-section-divider"></div>
                 </div>
                 
-                <div style="margin-bottom: 20px;">
-                    <div style="font-size: 0.9rem; color: #1e293b; line-height: 1.5; margin-bottom: 10px;">
-                        <strong>AI Software Developer (Internship)</strong> at Treetop Medical GmbH<br>
-                        <em style="color: #4f46e5;">July 2024 – September 2024, Vienna, Austria</em>
+                <div class="mobile-education-item">
+                    <div class="mobile-education-header">
+                        <div class="mobile-education-institution">
+                            <div class="mobile-institution-logo">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="mobile-institution-info">
+                                <h4 class="mobile-degree-title">Master Degree in Artificial Intelligence</h4>
+                                <p class="mobile-specialization">Minor in Natural Language Processing</p>
+                                <p class="mobile-institution-name">Johannes Kepler University Linz, Austria</p>
+                                <p class="mobile-graduation-year">2025</p>
+                            </div>
+                        </div>
+                        <div class="mobile-education-badge">Master's</div>
                     </div>
-                    <ul style="font-size: 0.8rem; color: #64748b; margin-left: 20px; margin-bottom: 15px;">
-                        <li>Reviewed and optimized existing codebase</li>
-                        <li>Developed Streamlit application for project visualization</li>
-                        <li>Implemented LLM-based solutions for data extraction</li>
-                        <li>Trained multi-class classification tasks using HuggingFace</li>
-                    </ul>
+                    <div class="mobile-education-content">
+                        <div class="mobile-education-highlights">
+                            <span class="mobile-highlight-pill">AI Research</span>
+                            <span class="mobile-highlight-pill">NLP Specialization</span>
+                            <span class="mobile-highlight-pill">Machine Learning</span>
+                        </div>
+                    </div>
                 </div>
                 
-                <div style="margin-bottom: 20px;">
-                    <div style="font-size: 0.9rem; color: #1e293b; line-height: 1.5; margin-bottom: 10px;">
-                        <strong>Technical Support</strong> at Manaseer Group<br>
-                        <em style="color: #4f46e5;">August 2022 – September 2023, Amman, Jordan</em>
+                <div class="mobile-education-item">
+                    <div class="mobile-education-header">
+                        <div class="mobile-education-institution">
+                            <div class="mobile-institution-logo">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="mobile-institution-info">
+                                <h4 class="mobile-degree-title">Bachelor in Computer Science</h4>
+                                <p class="mobile-institution-name">AlBalqa Applied University, Amman, Jordan</p>
+                                <p class="mobile-graduation-year">2022</p>
+                            </div>
+                        </div>
+                        <div class="mobile-education-badge">Bachelor's</div>
                     </div>
-                    <ul style="font-size: 0.8rem; color: #64748b; margin-left: 20px; margin-bottom: 15px;">
-                        <li>Software and hardware support, Microsoft Office troubleshooting</li>
-                        <li>Hardware diagnostics and component replacement</li>
-                        <li>Printer maintenance and camera installations</li>
-                    </ul>
-                </div>
-                
-                <div style="margin-bottom: 20px;">
-                    <div style="font-size: 0.9rem; color: #1e293b; line-height: 1.5; margin-bottom: 10px;">
-                        <strong>CTO & Lead Developer</strong> at AIKA Startup Company<br>
-                        <em style="color: #4f46e5;">June 2025 – Present, Austria</em>
-                    </div>
-                    <ul style="font-size: 0.8rem; color: #64748b; margin-left: 20px;">
-                        <li>Designed LLM-powered application with RAG for semantic search</li>
-                        <li>Developed frontend with TypeScript and backend with Python</li>
-                    </ul>
-                </div>
-            </section>
-            
-            <section style="margin-bottom: 30px; text-align: left;">
-                <h3>Education</h3>
-                <div style="margin-bottom: 15px;">
-                    <div style="font-size: 0.9rem; color: #1e293b; line-height: 1.5;">
-                        <strong>Master Degree in Artificial Intelligence</strong><br>
-                        <span style="color: #4f46e5;">Minor in Natural Language Processing</span><br>
-                        <em style="color: #64748b;">Johannes Kepler University Linz, Austria - 2025</em>
-                    </div>
-                </div>
-                <div style="margin-bottom: 15px;">
-                    <div style="font-size: 0.9rem; color: #1e293b; line-height: 1.5;">
-                        <strong>Bachelor in Computer Science</strong><br>
-                        <em style="color: #64748b;">AlBalqa Applied University, Amman, Jordan - 2022</em>
+                    <div class="mobile-education-content">
+                        <div class="mobile-education-highlights">
+                            <span class="mobile-highlight-pill">Software Engineering</span>
+                            <span class="mobile-highlight-pill">Data Structures</span>
+                            <span class="mobile-highlight-pill">Algorithms</span>
+                        </div>
                     </div>
                 </div>
             </section>
