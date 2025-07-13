@@ -210,15 +210,40 @@
     <!-- Device Detection Script -->
     <script>
         function isMobileDevice() {
-            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || 
-                   (window.innerWidth <= 768);
+            const userAgent = navigator.userAgent;
+            const isMobileUA = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+            const isSmallScreen = window.innerWidth <= 768;
+            
+            // Debug logging
+            console.log('User Agent:', userAgent);
+            console.log('Mobile UA detected:', isMobileUA);
+            console.log('Small screen detected:', isSmallScreen);
+            console.log('Window width:', window.innerWidth);
+            
+            return isMobileUA || isSmallScreen;
         }
         
-        // Redirect to mobile content if on mobile device
-        if (isMobileDevice() && !window.location.search.includes('desktop=true')) {
-            document.addEventListener('DOMContentLoaded', function() {
+        // Check device type and redirect accordingly
+        function checkDevice() {
+            const isMobile = isMobileDevice();
+            const forceDesktop = window.location.search.includes('desktop=true');
+            
+            console.log('Is mobile device:', isMobile);
+            console.log('Force desktop:', forceDesktop);
+            
+            if (isMobile && !forceDesktop) {
+                console.log('Loading mobile content...');
                 showMobileContent();
-            });
+            } else {
+                console.log('Loading desktop content...');
+            }
+        }
+        
+        // Run on page load
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', checkDevice);
+        } else {
+            checkDevice();
         }
         
         function showMobileContent() {
