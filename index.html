@@ -1,0 +1,2196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Amer Alnajdawi - AI & Software Developer specializing in LLM and RAG-based applications, NLP, and AI solutions.">
+    <meta name="keywords" content="AI, NLP, Software Developer, LLM, RAG, Machine Learning, Python">
+    <meta name="author" content="Amer Alnajdawi">
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Amer Alnajdawi - AI & Software Developer">
+    <meta property="og:description" content="Amer Alnajdawi - AI & Software Developer specializing in LLM and RAG-based applications, NLP, and AI solutions.">
+    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/2491/2491916.png">
+    <meta property="og:url" content="https://amernajdawi.com">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Amer Alnajdawi - AI & Software Developer">
+    <meta name="twitter:description" content="Amer Alnajdawi - AI & Software Developer specializing in LLM and RAG-based applications, NLP, and AI solutions.">
+    <meta name="twitter:image" content="https://cdn-icons-png.flaticon.com/512/2491/2491916.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Amer Alnajdawi - AI & Software Developer</title>
+    <!-- Updated timestamp: 2024-07-14 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <!-- Particles.js for background effect -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Typed.js for text animation -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --secondary: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            line-height: 1.8;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary), #7c3aed);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .gradient-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 60%);
+            pointer-events: none;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .ai-icon {
+            animation: float 6s ease-in-out infinite;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .contact-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px var(--primary);
+        }
+        
+        .section-spacing {
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+        }
+        
+        .highlight-box {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .highlight-box::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 40%;
+            background-color: rgba(79, 70, 229, 0.2);
+            z-index: -1;
+        }
+        
+        .btn-pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(79, 70, 229, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(79, 70, 229, 0);
+            }
+        }
+        
+        .card-hover-effect {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover-effect:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        /* Typing animation styles */
+        .typing-element::after {
+            content: '|';
+            animation: blink 1s step-end infinite;
+        }
+        
+        @keyframes blink {
+            from, to { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        .text-reveal {
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .text-reveal::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.3);
+            animation: reveal 1.5s ease forwards;
+        }
+        
+        @keyframes reveal {
+            0% { width: 0; left: 0; }
+            50% { width: 100%; left: 0; }
+            100% { width: 0; left: 100%; }
+        }
+    </style>
+    <!-- Mobile-First CSS Approach -->
+    <style>
+        /* Hide desktop content on mobile by default */
+        @media (max-width: 768px) {
+            .desktop-content {
+                display: none !important;
+            }
+            .mobile-content {
+                display: block !important;
+            }
+        }
+        
+        /* Hide mobile content on desktop */
+        @media (min-width: 769px) {
+            .mobile-content {
+                display: none !important;
+            }
+            .desktop-content {
+                display: block !important;
+            }
+        }
+        
+        /* Professional Mobile Design */
+        .mobile-card {
+            max-width: 420px;
+            margin: 20px auto;
+            padding: 40px 30px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 50%, #ffffff 100%);
+            border-radius: 24px;
+            box-shadow: 
+                0 25px 50px -12px rgba(0, 0, 0, 0.08),
+                0 0 0 1px rgba(255, 255, 255, 0.05),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            text-align: center;
+            animation: fadeInUp 0.8s ease-out;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+        
+        .mobile-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 20%, rgba(79, 70, 229, 0.03) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(124, 58, 237, 0.03) 0%, transparent 50%);
+            animation: pulse 6s ease-in-out infinite;
+            pointer-events: none;
+        }
+        
+        .mobile-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 30%;
+            margin-bottom: 24px;
+            border: 3px solid #ffffff;
+            box-shadow: 
+                0 8px 32px rgba(79, 70, 229, 0.15),
+                0 0 0 1px rgba(79, 70, 229, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: bounceIn 1s ease-out 0.3s both;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .mobile-card img:hover {
+            transform: scale(1.08) translateY(-2px);
+            box-shadow: 
+                0 20px 40px rgba(79, 70, 229, 0.25),
+                0 0 0 1px rgba(79, 70, 229, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+        
+        .mobile-card h1 {
+            margin: 0 0 8px 0;
+            font-size: 1.875rem;
+            color: #0f172a;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            line-height: 1.2;
+            animation: slideInLeft 0.8s ease-out 0.5s both;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .mobile-card h2 {
+            margin: 0 0 24px 0;
+            font-weight: 500;
+            color: #4f46e5;
+            font-size: 1rem;
+            letter-spacing: 0.025em;
+            text-transform: uppercase;
+            animation: slideInRight 0.8s ease-out 0.7s both;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .mobile-card p {
+            font-size: 0.875rem;
+            color: #475569;
+            margin-bottom: 32px;
+            line-height: 1.7;
+            text-align: left;
+            font-weight: 400;
+            animation: fadeIn 0.8s ease-out 0.9s both;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .mobile-skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 36px;
+            animation: fadeInUp 0.8s ease-out 1.1s both;
+        }
+        
+        .mobile-skill {
+            background: linear-gradient(135deg, #4f46e5 0%, #6366f1 50%, #7c3aed 100%);
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 24px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.025em;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: bounceIn 0.6s ease-out both;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .mobile-skill::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .mobile-skill:hover {
+            transform: translateY(-3px) scale(1.08);
+            box-shadow: 
+                0 12px 24px rgba(79, 70, 229, 0.25),
+                0 0 0 1px rgba(255, 255, 255, 0.2);
+        }
+        
+        .mobile-skill:hover::before {
+            left: 100%;
+        }
+        
+        .mobile-skill:nth-child(1) { animation-delay: 1.2s; }
+        .mobile-skill:nth-child(2) { animation-delay: 1.3s; }
+        .mobile-skill:nth-child(3) { animation-delay: 1.4s; }
+        .mobile-skill:nth-child(4) { animation-delay: 1.5s; }
+        .mobile-skill:nth-child(5) { animation-delay: 1.6s; }
+        .mobile-skill:nth-child(6) { animation-delay: 1.7s; }
+        .mobile-skill:nth-child(7) { animation-delay: 1.8s; }
+        .mobile-skill:nth-child(8) { animation-delay: 1.9s; }
+        .mobile-skill:nth-child(9) { animation-delay: 2.0s; }
+        .mobile-skill:nth-child(10) { animation-delay: 2.1s; }
+        .mobile-skill:nth-child(11) { animation-delay: 2.2s; }
+        .mobile-skill:nth-child(12) { animation-delay: 2.3s; }
+        .mobile-skill:nth-child(13) { animation-delay: 2.4s; }
+        .mobile-skill:nth-child(14) { animation-delay: 2.5s; }
+        .mobile-skill:nth-child(15) { animation-delay: 2.6s; }
+        .mobile-skill:nth-child(16) { animation-delay: 2.7s; }
+        
+        .mobile-projects {
+            text-align: left;
+            margin-bottom: 36px;
+            animation: fadeInUp 0.8s ease-out 1.3s both;
+        }
+        
+        .mobile-project {
+            margin-bottom: 16px;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            border-radius: 16px;
+            border-left: 3px solid #4f46e5;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: slideInLeft 0.6s ease-out both;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 
+                0 2px 8px rgba(0, 0, 0, 0.04),
+                0 0 0 1px rgba(79, 70, 229, 0.08);
+        }
+        
+        .mobile-project::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+            transition: width 0.3s ease;
+        }
+        
+        .mobile-project:hover {
+            transform: translateX(8px) translateY(-2px);
+            box-shadow: 
+                0 12px 24px rgba(79, 70, 229, 0.12),
+                0 0 0 1px rgba(79, 70, 229, 0.15);
+        }
+        
+        .mobile-project:hover::before {
+            width: 100%;
+        }
+        
+        .mobile-project a {
+            color: #4f46e5;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .mobile-project a:hover {
+            color: #7c3aed;
+            text-shadow: 0 2px 4px rgba(79, 70, 229, 0.2);
+        }
+        
+        .mobile-project span {
+            color: #64748b;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .mobile-project:nth-child(1) { animation-delay: 1.4s; }
+        .mobile-project:nth-child(2) { animation-delay: 1.5s; }
+        .mobile-project:nth-child(3) { animation-delay: 1.6s; }
+        .mobile-project:nth-child(4) { animation-delay: 1.7s; }
+        .mobile-project:nth-child(5) { animation-delay: 1.8s; }
+        
+        .mobile-social {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            animation: fadeInUp 0.8s ease-out 1.9s both;
+        }
+        
+        .mobile-social a {
+            font-size: 0.875rem;
+            color: #4f46e5;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 32px;
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            border: 1.5px solid #e2e8f0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: bounceIn 0.6s ease-out both;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 
+                0 2px 8px rgba(0, 0, 0, 0.04),
+                0 0 0 1px rgba(79, 70, 229, 0.08);
+        }
+        
+        .mobile-social a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+        
+        .mobile-social a:hover {
+            color: #ffffff;
+            transform: translateY(-3px);
+            border-color: #4f46e5;
+            box-shadow: 
+                0 12px 24px rgba(79, 70, 229, 0.2),
+                0 0 0 1px rgba(79, 70, 229, 0.15);
+        }
+        
+        .mobile-social a:hover::before {
+            left: 0;
+        }
+        
+        .mobile-social a:nth-child(1) { animation-delay: 2.0s; }
+        .mobile-social a:nth-child(2) { animation-delay: 2.1s; }
+        .mobile-social a:nth-child(3) { animation-delay: 2.2s; }
+        
+        .mobile-cv {
+            margin-top: 24px;
+            animation: fadeInUp 0.8s ease-out 2.3s both;
+        }
+        
+        .mobile-cv a {
+            display: inline-block;
+            background: linear-gradient(135deg, #4f46e5 0%, #6366f1 50%, #7c3aed 100%);
+            color: #ffffff;
+            padding: 16px 32px;
+            border-radius: 32px;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.025em;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: pulse 3s infinite;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 
+                0 8px 24px rgba(79, 70, 229, 0.25),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .mobile-cv a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .mobile-cv a:hover {
+            transform: translateY(-4px) scale(1.08);
+            box-shadow: 
+                0 20px 40px rgba(79, 70, 229, 0.35),
+                0 0 0 1px rgba(255, 255, 255, 0.2);
+        }
+        
+        .mobile-cv a:hover::before {
+            left: 100%;
+        }
+        
+        /* Mobile Animation Keyframes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(79, 70, 229, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(79, 70, 229, 0);
+            }
+        }
+        
+        /* Professional Section Styling */
+        .mobile-content section {
+            animation: fadeInUp 0.8s ease-out both;
+            margin-bottom: 40px;
+        }
+        
+        .mobile-content section h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 20px;
+            letter-spacing: -0.025em;
+            position: relative;
+            padding-bottom: 8px;
+        }
+        
+        .mobile-content section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 32px;
+            height: 2px;
+            background: linear-gradient(90deg, #4f46e5, #7c3aed);
+            border-radius: 1px;
+        }
+        
+        .mobile-content section:nth-child(2) { animation-delay: 1.1s; }
+        .mobile-content section:nth-child(3) { animation-delay: 1.3s; }
+        .mobile-content section:nth-child(4) { animation-delay: 1.5s; }
+        .mobile-content section:nth-child(5) { animation-delay: 1.7s; }
+        
+        .mobile-content footer {
+            animation: fadeInUp 0.8s ease-out 1.9s both;
+            margin-top: 40px;
+            padding-top: 32px;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .mobile-content footer h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 20px;
+            letter-spacing: -0.025em;
+        }
+        
+        /* Apple-inspired Mobile Section Styling */
+        .mobile-section {
+            animation: fadeInUp 0.8s ease-out both;
+            margin-bottom: 40px;
+        }
+        
+        .mobile-section-header {
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        
+        .mobile-section-title {
+            font-size: 1.375rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 12px;
+            letter-spacing: -0.05em;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .mobile-section-divider {
+            width: 48px;
+            height: 3px;
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #ec4899 100%);
+            margin: 0 auto;
+            border-radius: 2px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .mobile-section-divider::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+            animation: shimmer 2s infinite;
+        }
+        
+        /* Experience Item Styling */
+        .mobile-experience-item {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 
+                0 2px 12px rgba(0, 0, 0, 0.04),
+                0 0 0 1px rgba(79, 70, 229, 0.04);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            animation: slideInLeft 0.6s ease-out both;
+        }
+        
+        .mobile-experience-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            transition: width 0.3s ease;
+        }
+        
+        .mobile-experience-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 
+                0 12px 32px rgba(79, 70, 229, 0.12),
+                0 0 0 1px rgba(79, 70, 229, 0.08);
+            border-color: #c7d2fe;
+        }
+        
+        .mobile-experience-item:hover::before {
+            width: 100%;
+            opacity: 0.05;
+        }
+        
+        .mobile-experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+        
+        .mobile-experience-company {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            flex: 1;
+        }
+        
+        .mobile-company-logo {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.125rem;
+            flex-shrink: 0;
+            box-shadow: 
+                0 4px 12px rgba(79, 70, 229, 0.25),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-experience-item:hover .mobile-company-logo {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 
+                0 8px 24px rgba(79, 70, 229, 0.35),
+                0 0 0 1px rgba(255, 255, 255, 0.2);
+        }
+        
+        .mobile-company-info {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .mobile-role-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 4px;
+            letter-spacing: -0.025em;
+            line-height: 1.3;
+        }
+        
+        .mobile-company-name {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #4f46e5;
+            margin-bottom: 4px;
+            letter-spacing: -0.01em;
+        }
+        
+        .mobile-duration {
+            font-size: 0.8125rem;
+            color: #64748b;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+        
+        .mobile-experience-badge {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.025em;
+            text-transform: uppercase;
+            box-shadow: 
+                0 2px 8px rgba(16, 185, 129, 0.25),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            flex-shrink: 0;
+            animation: bounceIn 0.6s ease-out both;
+        }
+        
+        .mobile-experience-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .mobile-achievement-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            space-y: 8px;
+        }
+        
+        .mobile-achievement-list li {
+            font-size: 0.875rem;
+            color: #475569;
+            line-height: 1.6;
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .mobile-achievement-list li::before {
+            content: '◦';
+            position: absolute;
+            left: 0;
+            color: #4f46e5;
+            font-weight: 700;
+            font-size: 1.25rem;
+            line-height: 1;
+            top: -2px;
+        }
+        
+        /* Education Item Styling */
+        .mobile-education-item {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 
+                0 2px 12px rgba(0, 0, 0, 0.04),
+                0 0 0 1px rgba(79, 70, 229, 0.04);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            animation: slideInRight 0.6s ease-out both;
+        }
+        
+        .mobile-education-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(135deg, #ec4899 0%, #f97316 100%);
+            transition: width 0.3s ease;
+        }
+        
+        .mobile-education-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 
+                0 12px 32px rgba(236, 72, 153, 0.12),
+                0 0 0 1px rgba(236, 72, 153, 0.08);
+            border-color: #fce7f3;
+        }
+        
+        .mobile-education-item:hover::before {
+            width: 100%;
+            opacity: 0.05;
+        }
+        
+        .mobile-education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+        
+        .mobile-education-institution {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            flex: 1;
+        }
+        
+        .mobile-institution-logo {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, #ec4899 0%, #f97316 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.125rem;
+            flex-shrink: 0;
+            box-shadow: 
+                0 4px 12px rgba(236, 72, 153, 0.25),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-education-item:hover .mobile-institution-logo {
+            transform: scale(1.1) rotate(-5deg);
+            box-shadow: 
+                0 8px 24px rgba(236, 72, 153, 0.35),
+                0 0 0 1px rgba(255, 255, 255, 0.2);
+        }
+        
+        .mobile-institution-info {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .mobile-degree-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 4px;
+            letter-spacing: -0.025em;
+            line-height: 1.3;
+        }
+        
+        .mobile-specialization {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #ec4899;
+            margin-bottom: 4px;
+            letter-spacing: -0.01em;
+        }
+        
+        .mobile-institution-name {
+            font-size: 0.875rem;
+            color: #475569;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+        
+        .mobile-graduation-year {
+            font-size: 0.8125rem;
+            color: #64748b;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+        
+        .mobile-education-badge {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.025em;
+            text-transform: uppercase;
+            box-shadow: 
+                0 2px 8px rgba(59, 130, 246, 0.25),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            flex-shrink: 0;
+            animation: bounceIn 0.6s ease-out both;
+        }
+        
+        .mobile-education-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .mobile-education-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        
+        .mobile-highlight-pill {
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            color: #475569;
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.025em;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-highlight-pill:hover {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+        }
+        
+        /* Animation Delays */
+        .mobile-experience-item:nth-child(1) { animation-delay: 0.1s; }
+        .mobile-experience-item:nth-child(2) { animation-delay: 0.2s; }
+        .mobile-experience-item:nth-child(3) { animation-delay: 0.3s; }
+        .mobile-experience-item:nth-child(4) { animation-delay: 0.4s; }
+        
+        .mobile-education-item:nth-child(1) { animation-delay: 0.1s; }
+        .mobile-education-item:nth-child(2) { animation-delay: 0.2s; }
+        
+        /* Shimmer Animation */
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+    </style>
+    
+    <!-- Simple device detection for debugging -->
+    <script>
+        console.log('Window width:', window.innerWidth);
+        console.log('User agent:', navigator.userAgent);
+        console.log('Is mobile detected:', window.innerWidth <= 768);
+    </script>
+    
+    <!-- Placeholder for Google Analytics -->
+    <!-- Uncomment and add your tracking ID -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
+</head>
+<body class="bg-gray-50">
+    <!-- Mobile Content (shown on mobile devices) -->
+    <div class="mobile-content">
+        <div class="mobile-card">
+            <img src="IMG_3119.JPEG" alt="Amer Alnajdawi Profile">
+            <h1>Amer Alnajdawi</h1>
+            <h2>AI & Software Developer</h2>
+            <p>
+                A passionate and results-driven Artificial Intelligence professional currently pursuing a Master's degree in AI, with a specialization in Natural Language Processing. Possessing a strong background in developing AI-powered solutions, including LLM and RAG-based applications, for real-world challenges. Actively involved in problem-solving competitions, demonstrating a commitment to continuous learning and innovation in AI. Eager to leverage expertise in AI and NLP to contribute to dynamic projects and drive technological advancements.
+            </p>
+            
+            <section>
+                <h3>Skills</h3>
+                <div class="mobile-skills">
+                    <span class="mobile-skill">LLMs</span>
+                    <span class="mobile-skill">Prompting</span>
+                    <span class="mobile-skill">HuggingFace</span>
+                    <span class="mobile-skill">SpaCy</span>
+                    <span class="mobile-skill">Panda</span>
+                    <span class="mobile-skill">Git</span>
+                    <span class="mobile-skill">Computer Vision</span>
+                    <span class="mobile-skill">NLP</span>
+                    <span class="mobile-skill">LangChain</span>
+                    <span class="mobile-skill">Python</span>
+                    <span class="mobile-skill">APIs</span>
+                    <span class="mobile-skill">DevOps</span>
+                    <span class="mobile-skill">Docker</span>
+                </div>
+            </section>
+            
+            <section class="mobile-section" style="margin-bottom: 40px;">
+                <div class="mobile-section-header">
+                    <h3 class="mobile-section-title">Professional Experience</h3>
+                    <div class="mobile-section-divider"></div>
+                </div>
+                
+                <div class="mobile-experience-item">
+                    <div class="mobile-experience-header">
+                        <div class="mobile-experience-company">
+                            <div class="mobile-company-logo">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="mobile-company-info">
+                                <h4 class="mobile-role-title">AI Software Developer</h4>
+                                <p class="mobile-company-name">Timeless Soft GmbH</p>
+                                <p class="mobile-duration">January 2025 – Present • Vienna, Austria</p>
+                            </div>
+                        </div>
+                        <div class="mobile-experience-badge">Current</div>
+                    </div>
+                    <div class="mobile-experience-content">
+                        <ul class="mobile-achievement-list">
+                            <li>Developed the "e-novations" project backend algorithm for EV charging tariffs</li>
+                            <li>Built AI application using LLM to identify potential customers</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mobile-experience-item">
+                    <div class="mobile-experience-header">
+                        <div class="mobile-experience-company">
+                            <div class="mobile-company-logo">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <div class="mobile-company-info">
+                                <h4 class="mobile-role-title">AI Software Developer (Internship)</h4>
+                                <p class="mobile-company-name">Treetop Medical GmbH</p>
+                                <p class="mobile-duration">July 2024 – September 2024 • Vienna, Austria</p>
+                            </div>
+                        </div>
+                        <div class="mobile-experience-badge">Internship</div>
+                    </div>
+                    <div class="mobile-experience-content">
+                        <ul class="mobile-achievement-list">
+                            <li>Developed and integrated Streamlit application for project visualization</li>
+                            <li>Implemented and researched LLM-based solutions for data extraction tasks</li>
+                            <li>Enhanced project infrastructure by adding DevContainer support</li>
+                            <li>Conducted research on advanced data extraction techniques using large language models</li>
+                            <li>Trained and fine-tuned multi-class Classification tasks using HuggingFace and Transformers</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mobile-experience-item">
+                    <div class="mobile-experience-header">
+                        <div class="mobile-experience-company">
+                            <div class="mobile-company-logo">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div class="mobile-company-info">
+                                <h4 class="mobile-role-title">Technical Support</h4>
+                                <p class="mobile-company-name">Manaseer Group</p>
+                                <p class="mobile-duration">August 2022 – September 2023 • Amman, Jordan</p>
+                            </div>
+                        </div>
+                        <div class="mobile-experience-badge">Full-time</div>
+                    </div>
+                    <div class="mobile-experience-content">
+                        <ul class="mobile-achievement-list">
+                            <li>Software and hardware support, Microsoft Office troubleshooting</li>
+                            <li>Hardware diagnostics and component replacement</li>
+                            <li>Printer maintenance and camera installations</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mobile-experience-item">
+                    <div class="mobile-experience-header">
+                        <div class="mobile-experience-company">
+                            <div class="mobile-company-logo">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="mobile-company-info">
+                                <h4 class="mobile-role-title">CTO & Lead Developer</h4>
+                                <p class="mobile-company-name">AIKA Startup Company</p>
+                                <p class="mobile-duration">January 2025 – Present • Austria</p>
+                            </div>
+                        </div>
+                        <div class="mobile-experience-badge">Leadership</div>
+                    </div>
+                    <div class="mobile-experience-content">
+                        <ul class="mobile-achievement-list">
+                            <li>As CTO and key partner, drove the development of a technology solution for economic transformation and sustainability</li>
+                            <li>Designed and developed the LLM-powered application with RAG for semantic search and knowledge accessibility</li>
+                            <li>Developed the frontend with TypeScript and backend with Python for robust application functionality</li>
+                            <li>Integrated vector search database for complex reporting and expert knowledge management</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h3>Featured Projects</h3>
+                <div class="mobile-projects">
+                    <div class="mobile-project">
+                        <a href="https://www.aika.at" target="_blank" rel="noopener noreferrer">AIKA Project</a>
+                        <br><span>As CTO and key partner, drove the development of a technology solution for economic transformation and sustainability. Designed and developed the LLM-powered application with RAG for semantic search and knowledge accessibility. <strong>Project Status: Developed and Live</strong></span>
+                    </div>
+                    <div class="mobile-project">
+                        <a href="#" target="_blank" rel="noopener noreferrer">Normo - Austrian Architectural Legal Document Analysis System (Partner/Developer)</a>
+                        <br><span>An intelligent AI-powered system for analyzing Austrian building codes, regulations, and legal documents. Features include intelligent query routing with LLM gate, comprehensive document database (OIB guidelines, ÖNORM standards, federal/state laws), advanced RAG system with vector-based document retrieval, conversation management with MongoDB + JSON hybrid storage, modern React-based frontend with Material-UI, and complete Docker support. Built with FastAPI backend, ChromaDB for vector embeddings, and React TypeScript frontend. <strong>Project Status: Working on it</strong></span>
+                    </div>
+                    <div class="mobile-project">
+                        <a href="https://github.com/amernajdawi/e-novations" target="_blank" rel="noopener noreferrer">e-novations EV Charging</a>
+                        <br><span>Backend algorithm to find optimal electric vehicle charging tariffs from various providers in Austria based on customer location.</span>
+                    </div>
+                    <div class="mobile-project">
+                        <a href="https://github.com/amernajdawi/ai-customer-identification" target="_blank" rel="noopener noreferrer">AI Customer Identification</a>
+                        <br><span>LLM-based application to identify potential customers for business development.</span>
+                    </div>
+                    <div class="mobile-project">
+                        <a href="https://github.com/amernajdawi/Structured-Data-Extraction-from-Laboratory-Reports" target="_blank" rel="noopener noreferrer">Structured Data Extraction from Laboratory Reports</a>
+                        <br><span>Extracted lab report data such as (Type, Value, Unit, and Range) and some Metadata such as (Name, Gender, Creation_date, and Birthdate). GPT 4o mini was utilized with a custom prompt. Developed the project inside a Dev-Container. Used Poetry as dependency management and packaging.</span>
+                    </div>
+                    <div class="mobile-project">
+                        <a href="#" target="_blank" rel="noopener noreferrer">JO Service - On-Demand Service Marketplace (Local Project)</a>
+                        <br><span>A comprehensive Flutter-based service marketplace connecting users with skilled service providers. Features include multi-role authentication, location-based services, real-time chat with WebSocket, advanced booking system, comprehensive rating system, and internationalization (Arabic/English). Built with Flutter frontend and Node.js/Express backend with MongoDB.</span>
+                    </div>
+                    <div class="mobile-project">
+                        <a href="#" target="_blank" rel="noopener noreferrer">Chat with Your Favorite Book</a>
+                        <br><span>Developed BookBuddy, an AI-powered book companion app using Python, Streamlit, and LangChain.</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="mobile-section" style="margin-bottom: 40px;">
+                <div class="mobile-section-header">
+                    <h3 class="mobile-section-title">Education</h3>
+                    <div class="mobile-section-divider"></div>
+                </div>
+                
+                <div class="mobile-education-item">
+                    <div class="mobile-education-header">
+                        <div class="mobile-education-institution">
+                            <div class="mobile-institution-logo">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="mobile-institution-info">
+                                <h4 class="mobile-degree-title">Master Degree in Artificial Intelligence</h4>
+                                <p class="mobile-specialization">Minor in Natural Language Processing</p>
+                                <p class="mobile-institution-name">Johannes Kepler University Linz, Austria</p>
+                                <p class="mobile-graduation-year">2025</p>
+                            </div>
+                        </div>
+                        <div class="mobile-education-badge">Master's</div>
+                    </div>
+                    <div class="mobile-education-content">
+                        <div class="mobile-education-highlights">
+                            <span class="mobile-highlight-pill">AI Research</span>
+                            <span class="mobile-highlight-pill">NLP Specialization</span>
+                            <span class="mobile-highlight-pill">Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mobile-education-item">
+                    <div class="mobile-education-header">
+                        <div class="mobile-education-institution">
+                            <div class="mobile-institution-logo">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="mobile-institution-info">
+                                <h4 class="mobile-degree-title">Bachelor in Computer Science</h4>
+                                <p class="mobile-institution-name">AlBalqa Applied University, Amman, Jordan</p>
+                                <p class="mobile-graduation-year">2022</p>
+                            </div>
+                        </div>
+                        <div class="mobile-education-badge">Bachelor's</div>
+                    </div>
+                    <div class="mobile-education-content">
+                        <div class="mobile-education-highlights">
+                            <span class="mobile-highlight-pill">Software Engineering</span>
+                            <span class="mobile-highlight-pill">Data Structures</span>
+                            <span class="mobile-highlight-pill">Algorithms</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <footer>
+                <h3>Connect with me</h3>
+                <div class="mobile-social">
+                    <a href="https://github.com/amernajdawi" target="_blank" rel="noopener noreferrer">🐙 GitHub</a>
+                    <a href="https://linkedin.com/in/amer-alnajdawi" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
+                    <a href="mailto:amer.alnajdawi@example.com">📧 Email</a>
+                </div>
+                <div class="mobile-cv">
+                    <a href="AmerNajdawi.pdf" download>📄 Download CV</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Desktop Content (shown on desktop devices) -->
+    <div class="desktop-content">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50" role="navigation" aria-label="Main navigation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-xl font-bold text-gray-900">Amer Alnajdawi</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#about" class="nav-link text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">About</a>
+                        <a href="#experience" class="nav-link text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Experience</a>
+                        <a href="#education" class="nav-link text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Education</a>
+                        <a href="#projects" class="nav-link text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Projects</a>
+                        <a href="#skills" class="nav-link text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Skills</a>
+                        <a href="#contact" class="nav-link text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-indigo-600 focus:outline-none" aria-expanded="false" aria-controls="mobile-menu">
+                        <i class="fas fa-bars text-2xl" id="menu-open-icon" aria-hidden="true"></i>
+                        <i class="fas fa-times text-2xl hidden" id="menu-close-icon" aria-hidden="true"></i>
+                        <span class="sr-only">Toggle navigation menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg transition-all duration-300 ease-in-out" role="menu" aria-labelledby="mobile-menu-button">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600" role="menuitem">Home</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600" role="menuitem">About</a>
+                <a href="#experience" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600" role="menuitem">Experience</a>
+                <a href="#education" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600" role="menuitem">Education</a>
+                <a href="#projects" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600" role="menuitem">Projects</a>
+                <a href="#skills" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600" role="menuitem">Skills</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600" role="menuitem">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white pt-32 pb-24 md:pt-40 md:pb-32">
+        <div id="particles-js"></div>
+        <div class="hero-content">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="md:flex items-center justify-between">
+                    <div class="md:w-1/2 mb-16 md:mb-0" data-aos="fade-right" data-aos-delay="100">
+                        <div class="inline-block px-3 py-1 rounded-full bg-white bg-opacity-20 text-white text-xs font-semibold mb-4">
+                            AI & Software Developer
+                    </div>
+                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 text-reveal">
+                            <span class="text-white">Amer</span> <span class="text-indigo-100 highlight-box">Alnajdawi</span>
+                    </h1>
+                        <div class="h-20 md:h-16"> <!-- Reduced height container for typing animation -->
+                            <p class="text-lg md:text-xl opacity-90 leading-relaxed max-w-xl">
+                                <span id="typed-text"></span>
+                            </p>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4 mt-6">
+                            <a href="AmerNajdawi.pdf" class="bg-white text-indigo-600 hover:bg-yellow-300 hover:text-gray-900 font-semibold py-3 px-6 rounded-lg transition duration-300 text-center text-base btn-pulse flex items-center justify-center" download>
+                                <span>Download CV</span>
+                                <i class="fas fa-file-download ml-2"></i>
+                            </a>
+                            <a href="#contact" class="bg-indigo-100 text-indigo-600 hover:bg-indigo-600 hover:text-white font-semibold py-3 px-6 rounded-lg transition duration-300 text-center text-base flex items-center justify-center">
+                                <span>Contact Me</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                            <a href="#projects" class="border-2 border-white text-white hover:bg-white hover:text-indigo-600 font-semibold py-3 px-6 rounded-lg transition duration-300 text-center text-base flex items-center justify-center">
+                                <span>My Projects</span>
+                            <i class="fas fa-chevron-down ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                    <div class="md:w-1/2 flex justify-center" data-aos="fade-left" data-aos-delay="300">
+                        <div class="relative">
+                            <div class="ai-icon">
+                                <div class="w-72 h-72 flex items-center justify-center">
+                                    <i class="fas fa-code-branch text-6xl text-white"></i>
+                                </div>
+                            </div>
+                            <div class="absolute -bottom-5 -left-5 bg-yellow-400 rounded-full w-32 h-32 opacity-30 animate-pulse"></div>
+                            <div class="absolute -top-5 -right-5 bg-indigo-400 rounded-full w-28 h-28 opacity-30 animate-pulse"></div>
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-indigo-500 opacity-20 rounded-full animate-ping" style="animation-duration: 3s;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="section-spacing bg-white">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="md:flex items-center">
+                <div class="md:w-2/5 mb-10 md:mb-0" data-aos="fade-right">
+                    <div class="relative">
+                        <img src="IMG_3119.JPEG" alt="Amer Alnajdawi" class="rounded-xl shadow-lg w-full object-cover" loading="lazy">
+                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-indigo-500 opacity-20 rounded-lg transform rotate-12"></div>
+                        <div class="absolute -top-6 -left-6 w-32 h-32 bg-yellow-300 opacity-20 rounded-lg transform -rotate-12"></div>
+                    </div>
+                </div>
+                <div class="md:w-3/5 md:pl-16" data-aos="fade-left" data-aos-delay="200">
+                    <div class="inline-block px-4 py-1 rounded-full bg-indigo-100 text-indigo-600 text-sm font-semibold mb-4">About Me</div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        <span class="relative">
+                            <span class="relative z-10">AI & Software</span>
+                            <span class="absolute bottom-1 left-0 w-full h-3 bg-indigo-100 -z-10"></span>
+                        </span>
+                        <span class="text-indigo-600 ml-2">Development</span>
+                    </h2>
+                    <p class="text-gray-600 mb-6 text-lg">
+                        A passionate and results-driven Artificial Intelligence professional currently pursuing a Master's degree in AI, with a specialization in Natural Language Processing. Possessing a strong background in developing AI-powered solutions, including LLM and RAG-based applications, for real-world challenges.
+                    </p>
+                    <p class="text-gray-600 mb-8 text-lg">
+                        Actively involved in problem-solving competitions, demonstrating a commitment to continuous learning and innovation in AI. Eager to leverage expertise in AI and NLP to contribute to dynamic projects and drive technological advancements.
+                    </p>
+                    <div class="grid grid-cols-2 gap-x-8 gap-y-4 mb-8">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-brain text-indigo-600"></i>
+                            </div>
+                            <span class="text-gray-700 font-medium">AI Development</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-comments text-indigo-600"></i>
+                            </div>
+                            <span class="text-gray-700 font-medium">NLP Specialist</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-code text-indigo-600"></i>
+                            </div>
+                            <span class="text-gray-700 font-medium">Software Engineering</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-graduation-cap text-indigo-600"></i>
+                            </div>
+                            <span class="text-gray-700 font-medium">Continuous Learner</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="https://linkedin.com/in/amer-alnajdawi" target="_blank" class="bg-[#0077B5] hover:bg-[#00669c] text-white font-semibold py-3 px-6 rounded-lg transition duration-300 inline-flex items-center">
+                            <i class="fab fa-linkedin-in mr-2"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/amernajdawi" target="_blank" class="bg-[#333] hover:bg-[#555] text-white font-semibold py-3 px-6 rounded-lg transition duration-300 inline-flex items-center">
+                            <i class="fab fa-github mr-2"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-spacing bg-white">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <div class="inline-block px-4 py-1 rounded-full bg-indigo-100 text-indigo-600 text-sm font-semibold mb-4">My Experience</div>
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+                    <span class="relative">
+                        <span class="relative z-10">Professional</span>
+                        <span class="absolute bottom-1 left-0 w-full h-3 bg-indigo-100 -z-10"></span>
+                    </span>
+                    <span class="text-indigo-600 ml-2">Experience</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+                    A track record of developing AI-powered solutions and software applications for real-world challenges.
+                </p>
+                <div class="flex justify-center space-x-3 mb-12">
+                    <div class="w-4 h-4 rounded-full bg-indigo-500"></div>
+                    <div class="w-4 h-4 rounded-full bg-blue-500"></div>
+                    <div class="w-4 h-4 rounded-full bg-green-500"></div>
+                    <div class="w-4 h-4 rounded-full bg-orange-500"></div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Experience 1 -->
+                <div class="service-card relative overflow-hidden rounded-xl shadow-xl transition-all duration-500 group hover:shadow-2xl" data-aos="zoom-in-up" data-aos-delay="100">
+                    <div class="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-600 opacity-90"></div>
+                    <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+                    <div class="relative p-10 z-10">
+                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6 transform transition-all duration-500 group-hover:rotate-12">
+                            <i class="fas fa-brain text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Artificial Intelligent Software Developer</h3>
+                        <p class="text-white text-opacity-90 mb-2">
+                            Timeless Soft GmbH
+                        </p>
+                        <p class="text-white text-opacity-70 mb-6">
+                            January 2025 – Present, Vienna, Austria
+                        </p>
+                        <div class="bg-white bg-opacity-10 rounded-lg p-4 backdrop-filter backdrop-blur-sm">
+                            <ul class="space-y-2 text-white text-sm">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-300 mr-2 mt-1"></i>
+                                    <span>Developed the "e-novations" project, building a backend algorithm to find optimal electric vehicle charging tariffs from various providers in Austria, based on customer location.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-300 mr-2 mt-1"></i>
+                                    <span>Built an AI application using LLM to identify potential customers for the company.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience 2 -->
+                <div class="service-card relative overflow-hidden rounded-xl shadow-xl transition-all duration-500 group hover:shadow-2xl" data-aos="zoom-in-up" data-aos-delay="200">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-600 opacity-90"></div>
+                    <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+                    <div class="relative p-10 z-10">
+                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6 transform transition-all duration-500 group-hover:rotate-12">
+                            <i class="fas fa-code text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Artificial Intelligent Software Developer (Internship)</h3>
+                        <p class="text-white text-opacity-90 mb-2">
+                            Treetop Medical GmbH
+                        </p>
+                        <p class="text-white text-opacity-70 mb-6">
+                            July 2024 – September 2024, Vienna, Austria
+                        </p>
+                        <div class="bg-white bg-opacity-10 rounded-lg p-4 backdrop-filter backdrop-blur-sm">
+                            <ul class="space-y-2 text-white text-sm">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-300 mr-2 mt-1"></i>
+                                    <span>Developed and integrated Streamlit application for project visualization</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-300 mr-2 mt-1"></i>
+                                    <span>Implemented and researched LLM-based solutions for data extraction tasks</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-300 mr-2 mt-1"></i>
+                                    <span>Enhanced project infrastructure by adding DevContainer support</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-300 mr-2 mt-1"></i>
+                                    <span>Conducted research on advanced data extraction techniques using large language models</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-300 mr-2 mt-1"></i>
+                                    <span>Trained and fine-tuned multi-class Classification tasks using HuggingFace and Transformers</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience 3 -->
+                <div class="service-card relative overflow-hidden rounded-xl shadow-xl transition-all duration-500 group hover:shadow-2xl" data-aos="zoom-in-up" data-aos-delay="300">
+                    <div class="absolute inset-0 bg-gradient-to-br from-green-500 to-emerald-600 opacity-90"></div>
+                    <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+                    <div class="relative p-10 z-10">
+                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6 transform transition-all duration-500 group-hover:rotate-12">
+                            <i class="fas fa-desktop text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Technical Support</h3>
+                        <p class="text-white text-opacity-90 mb-2">
+                            Manaseer Group
+                        </p>
+                        <p class="text-white text-opacity-70 mb-6">
+                            August 2022 – September 2023, Amman, Jordan
+                        </p>
+                        <div class="bg-white bg-opacity-10 rounded-lg p-4 backdrop-filter backdrop-blur-sm">
+                            <ul class="space-y-2 text-white text-sm">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-300 mr-2 mt-1"></i>
+                                    <span>Specialized in software and hardware support, including Microsoft Office Suite installation and troubleshooting.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-300 mr-2 mt-1"></i>
+                                    <span>Excel at diagnosing and resolving hardware issues, efficiently replacing faulty components.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-300 mr-2 mt-1"></i>
+                                    <span>Skilled in proactive printer maintenance, camera installations, and collaborative problem-solving.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Experience - AIKA -->
+                <div class="service-card relative overflow-hidden rounded-xl shadow-xl transition-all duration-500 group hover:shadow-2xl" data-aos="zoom-in-up" data-aos-delay="400">
+                    <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-600 opacity-90"></div>
+                    <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+                    <div class="relative p-10 z-10">
+                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6 transform transition-all duration-500 group-hover:rotate-12">
+                            <i class="fas fa-project-diagram text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">CTO & Lead Developer, AIKA Project</h3>
+                        <p class="text-white text-opacity-90 mb-2">
+                            AIKA Startup Company
+                        </p>
+                        <p class="text-white text-opacity-70 mb-6">
+                            January 2025 – Present, Austria
+                        </p>
+                        <div class="bg-white bg-opacity-10 rounded-lg p-4 backdrop-filter backdrop-blur-sm">
+                            <ul class="space-y-2 text-white text-sm">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-300 mr-2 mt-1"></i>
+                                    <span>As CTO and key partner, drove the development of a technology solution for economic transformation and sustainability.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-300 mr-2 mt-1"></i>
+                                    <span>Designed and developed the LLM-powered application with RAG for semantic search and knowledge accessibility.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-300 mr-2 mt-1"></i>
+                                    <span>Developed the frontend with TypeScript and backend with Python for robust application functionality.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-300 mr-2 mt-1"></i>
+                                    <span>Integrated vector search database for complex reporting and expert knowledge management.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="inline-block px-4 py-1 rounded-full bg-indigo-100 text-indigo-600 text-sm font-semibold mb-4">My Education</div>
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+                    <span class="relative">
+                        <span class="relative z-10">Academic</span>
+                        <span class="absolute bottom-1 left-0 w-full h-3 bg-indigo-100 -z-10"></span>
+                    </span>
+                    <span class="text-indigo-600 ml-2">Background</span>
+                </h2>
+                </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2" data-aos="flip-left" data-aos-delay="100">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-graduation-cap text-indigo-600"></i>
+                </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Master Degree in Artificial Intelligence</h3>
+                            <p class="text-gray-600">Minor in Natural Language Processing</p>
+                            <p class="text-indigo-600 font-medium">Johannes Kepler University Linz, Austria</p>
+                            <p class="text-gray-500">2025</p>
+                </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2" data-aos="flip-right" data-aos-delay="200">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-graduation-cap text-indigo-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Bachelor in Computer Science</h3>
+                            <p class="text-indigo-600 font-medium">AlBalqa Applied University, Amman, Jordan</p>
+                            <p class="text-gray-500">2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="relative py-8">
+        <div class="absolute inset-0 flex items-center">
+            <div class="w-full border-t border-gray-200"></div>
+        </div>
+        <div class="relative flex justify-center">
+            <div class="bg-white px-4 text-center">
+                <div class="flex space-x-4">
+                    <span class="w-3 h-3 bg-indigo-500 rounded-full animate-pulse"></span>
+                    <span class="w-3 h-3 bg-blue-500 rounded-full animate-pulse" style="animation-delay: 0.2s"></span>
+                    <span class="w-3 h-3 bg-green-500 rounded-full animate-pulse" style="animation-delay: 0.4s"></span>
+                    <span class="w-3 h-3 bg-orange-500 rounded-full animate-pulse" style="animation-delay: 0.6s"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-spacing bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+                    <span class="relative">
+                        <span class="relative z-10">My</span>
+                        <span class="absolute bottom-1 left-0 w-full h-3 bg-indigo-100 -z-10"></span>
+                    </span>
+                    <span class="text-indigo-600 ml-2">Projects</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Explore some of my recent projects in AI, NLP, and software development.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Project 1: AIKA Project -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 hover:shadow-xl card-hover-effect" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-56 bg-indigo-100 flex items-center justify-center overflow-hidden">
+                        <i class="fas fa-project-diagram text-6xl text-indigo-600 transform transition-all duration-500 hover:scale-125"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">AIKA Project</h3>
+                        <p class="text-gray-600 mb-6">
+                            As CTO and key partner, drove the development of a technology solution for economic transformation and sustainability. Designed and developed the LLM-powered application with RAG for semantic search and knowledge accessibility. Integrated vector search database for complex reporting and expert knowledge management. <strong>Project Status: Developed and Live</strong>
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">LLM</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">RAG</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">TypeScript</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">Python</span>
+                        </div>
+                        <a href="https://www.aika.at" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-semibold">
+                            <span>Visit Website</span>
+                            <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2: Normo -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 hover:shadow-xl card-hover-effect" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-56 bg-teal-100 flex items-center justify-center overflow-hidden">
+                        <i class="fas fa-building text-6xl text-teal-600 transform transition-all duration-500 hover:scale-125"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Normo - Austrian Architectural Legal Document Analysis System</h3>
+                        <p class="text-gray-600 mb-6">
+                            An intelligent AI-powered system for analyzing Austrian building codes, regulations, and legal documents. Features include intelligent query routing with LLM gate, comprehensive document database (OIB guidelines, ÖNORM standards, federal/state laws), advanced RAG system with vector-based document retrieval, conversation management with MongoDB + JSON hybrid storage, modern React-based frontend with Material-UI, and complete Docker support. Built with FastAPI backend, ChromaDB for vector embeddings, and React TypeScript frontend. <strong>Project Status: Working on it</strong>
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-teal-100 text-teal-800 text-sm font-medium px-3 py-1 rounded-full">AI/LLM</span>
+                            <span class="bg-teal-100 text-teal-800 text-sm font-medium px-3 py-1 rounded-full">RAG</span>
+                            <span class="bg-teal-100 text-teal-800 text-sm font-medium px-3 py-1 rounded-full">FastAPI</span>
+                            <span class="bg-teal-100 text-teal-800 text-sm font-medium px-3 py-1 rounded-full">React</span>
+                            <span class="bg-teal-100 text-teal-800 text-sm font-medium px-3 py-1 rounded-full">MongoDB</span>
+                            <span class="bg-teal-100 text-teal-800 text-sm font-medium px-3 py-1 rounded-full">ChromaDB</span>
+                            <span class="bg-teal-100 text-teal-800 text-sm font-medium px-3 py-1 rounded-full">Docker</span>
+                            <span class="bg-teal-100 text-teal-800 text-sm font-medium px-3 py-1 rounded-full">Partner/Developer</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3: Lab Reports Data Extraction -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 hover:shadow-xl card-hover-effect" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-56 bg-blue-100 flex items-center justify-center overflow-hidden">
+                        <i class="fas fa-file-medical-alt text-6xl text-blue-600 transform transition-all duration-500 hover:scale-125"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Structured Data Extraction from Laboratory Reports</h3>
+                        <p class="text-gray-600 mb-6">
+                            Extracted lab report data such as (Type, Value, Unit, and Range) and some Metadata such as (Name, Gender, Creation_date, and Birthdate). GPT 4o mini was utilized with a custom prompt. Developed the project inside a Dev-Container. Used Poetry as dependency management and packaging.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">OpenAI</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">DevContainer</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Poetry</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4: JO Service -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 hover:shadow-xl card-hover-effect" data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-56 bg-purple-100 flex items-center justify-center overflow-hidden">
+                        <i class="fas fa-mobile-alt text-6xl text-purple-600 transform transition-all duration-500 hover:scale-125"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">JO Service - On-Demand Service Marketplace</h3>
+                        <p class="text-gray-600 mb-6">
+                            A comprehensive Flutter-based service marketplace connecting users with skilled service providers. Features include multi-role authentication, location-based services, real-time chat with WebSocket, advanced booking system, comprehensive rating system, and internationalization (Arabic/English). Built with Flutter frontend and Node.js/Express backend with MongoDB.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">Flutter</span>
+                            <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">Node.js</span>
+                            <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">MongoDB</span>
+                            <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">WebSocket</span>
+                            <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">Local Project</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5: Chat with Books -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 hover:shadow-xl card-hover-effect" data-aos="fade-up" data-aos-delay="500">
+                    <div class="h-56 bg-green-100 flex items-center justify-center overflow-hidden">
+                        <i class="fas fa-book text-6xl text-green-600 transform transition-all duration-500 hover:scale-125"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Chat with Your Favorite Book</h3>
+                        <p class="text-gray-600 mb-6">
+                            Developed BookBuddy, an AI-powered book companion app using Python, Streamlit, and LangChain.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">LLM</span>
+                            <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Streamlit</span>
+                            <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">LangChain</span>
+                            <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Vector DB</span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                
+            <div class="text-center mt-16" data-aos="zoom-in" data-aos-delay="400">
+                <a href="https://github.com/amernajdawi" target="_blank" class="border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white font-semibold py-4 px-8 rounded-lg transition duration-300 text-lg">
+                    View All Projects on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-spacing bg-white">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+                    <span class="relative">
+                        <span class="relative z-10">Technical</span>
+                        <span class="absolute bottom-1 left-0 w-full h-3 bg-indigo-100 -z-10"></span>
+                    </span>
+                    <span class="text-indigo-600 ml-2">Skills</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    A diverse set of technical skills that enable me to develop innovative AI-powered solutions.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fas fa-brain text-5xl text-indigo-600 mb-4"></i>
+                    <span class="text-gray-700 font-medium">LLMs</span>
+                        </div>
+                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="150">
+                    <i class="fas fa-comment-dots text-5xl text-green-500 mb-4"></i>
+                    <span class="text-gray-700 font-medium">Prompting</span>
+                        </div>
+                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fas fa-file-code text-5xl text-blue-500 mb-4"></i>
+                    <span class="text-gray-700 font-medium">Huggingface</span>
+                    </div>
+                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="250">
+                    <i class="fas fa-language text-5xl text-orange-500 mb-4"></i>
+                    <span class="text-gray-700 font-medium">SpaCy</span>
+                    </div>
+                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fas fa-table text-5xl text-blue-500 mb-4"></i>
+                    <span class="text-gray-700 font-medium">Panda</span>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="700">
+                    <i class="fas fa-server text-5xl text-gray-600 mb-4"></i>
+                    <span class="text-gray-700 font-medium">DevOps</span>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="350">
+                    <i class="fab fa-git-alt text-5xl text-red-600 mb-4"></i>
+                    <span class="text-gray-700 font-medium">Git</span>
+                        </div>
+                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="400">
+                    <i class="fas fa-eye text-5xl text-purple-500 mb-4"></i>
+                    <span class="text-gray-700 font-medium">Computer Vision</span>
+                        </div>
+                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="450">
+                    <i class="fas fa-comments text-5xl text-indigo-500 mb-4"></i>
+                    <span class="text-gray-700 font-medium">NLP</span>
+                    </div>
+                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="500">
+                    <i class="fas fa-link text-5xl text-green-500 mb-4"></i>
+                    <span class="text-gray-700 font-medium">LangChain</span>
+                    </div>
+                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="550">
+                    <i class="fab fa-python text-5xl text-blue-600 mb-4"></i>
+                    <span class="text-gray-700 font-medium">Python</span>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="600">
+                    <i class="fas fa-plug text-5xl text-gray-600 mb-4"></i>
+                    <span class="text-gray-700 font-medium">APIs</span>
+                        </div>
+                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="650">
+                    <i class="fab fa-docker text-5xl text-blue-500 mb-4"></i>
+                    <span class="text-gray-700 font-medium">Docker</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-spacing bg-indigo-600 text-white" role="region" aria-label="Contact me">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="md:flex items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right" data-aos-delay="100">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Let's Connect</h2>
+                    <p class="text-lg opacity-90 mb-8">
+                        I'm open to discussing new opportunities, collaborations, or just chatting about AI and technology.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start" data-aos="fade-up" data-aos-delay="150">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-envelope text-xl" aria-hidden="true"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold">Email</h3>
+                                <p class="opacity-90">amernajdawi8@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start" data-aos="fade-up" data-aos-delay="200">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-phone-alt text-xl" aria-hidden="true"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold">Phone</h3>
+                                <p class="opacity-90">+43 676 5944099</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start" data-aos="fade-up" data-aos-delay="250">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-map-marker-alt text-xl" aria-hidden="true"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold">Location</h3>
+                                <p class="opacity-90">Vienna, Austria</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 flex space-x-4" data-aos="fade-up" data-aos-delay="300">
+                        <a href="https://linkedin.com/in/amer-alnajdawi" target="_blank" class="w-10 h-10 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 flex items-center justify-center transition duration-300" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/amernajdawi" target="_blank" class="w-10 h-10 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 flex items-center justify-center transition duration-300" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://t.me/amernajdawi" target="_blank" class="w-10 h-10 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 flex items-center justify-center transition duration-300" aria-label="Telegram">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-12" data-aos="fade-left" data-aos-delay="150">
+                    <div class="bg-white rounded-xl shadow-xl p-8 text-gray-900">
+                        <h3 class="text-2xl font-bold mb-6">Send Me a Message</h3>
+                        <form id="contactForm">
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="contact-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent" placeholder="Your name" required aria-required="true">
+                            </div>
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="contact-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent" placeholder="Your email" required aria-required="true">
+                            </div>
+                            <div class="mb-6">
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                                <input type="text" id="subject" name="subject" class="contact-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent" placeholder="Subject">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" name="message" rows="4" class="contact-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent" placeholder="Your message" required aria-required="true"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 flex items-center justify-center">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                        <div id="successMessage" class="hidden mt-6 p-4 bg-green-100 text-green-700 rounded-lg" role="status">
+                            <p>Thank you for your message! I'll get back to you soon at <strong>amernajdawi8@gmail.com</strong>.</p>
+                        </div>
+                        <div id="errorMessage" class="hidden mt-6 p-4 bg-red-100 text-red-700 rounded-lg" role="alert">
+                            <p>Sorry, there was an error sending your message. Please try again or contact me directly via email or Telegram.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12" role="contentinfo">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0 flex items-center" data-aos="fade-right">
+                    <span class="text-xl font-bold">Amer Alnajdawi</span>
+                    </div>
+                
+                <div class="flex space-x-6 mb-8 md:mb-0" data-aos="fade-up">
+                    <a href="https://linkedin.com/in/amer-alnajdawi" target="_blank" class="text-gray-400 hover:text-white transition duration-300" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/amernajdawi" target="_blank" class="text-gray-400 hover:text-white transition duration-300" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                
+                <p class="text-gray-400 text-sm" data-aos="fade-left">
+                    &copy; <span id="currentYear">2023</span> Amer Alnajdawi. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-indigo-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition duration-300 opacity-0 invisible hover:bg-indigo-700">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            const openIcon = document.getElementById('menu-open-icon');
+            const closeIcon = document.getElementById('menu-close-icon');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+            menu.classList.toggle('hidden');
+            openIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Dynamically set the current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Form submission to Telegram
+        document.getElementById('contactForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            
+            const form = this;
+            const submitButton = form.querySelector('button[type="submit"]');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
+            
+            // Hide previous messages
+            successMessage.classList.add('hidden');
+            errorMessage.classList.add('hidden');
+            
+            // Get form data
+            const formData = new FormData(form);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const subject = formData.get('subject') || 'No subject';
+            const message = formData.get('message');
+            
+            // Disable submit button
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<span>Sending...</span><i class="fas fa-spinner fa-spin ml-2"></i>';
+            
+            // Format message for Telegram
+            const telegramMessage = `📧 *New Contact Form Message*
+
+👤 *Name:* ${name}
+📧 *Email:* ${email}
+📌 *Subject:* ${subject}
+💬 *Message:*
+${message}`;
+            
+            // Telegram Bot API credentials
+            const TELEGRAM_BOT_TOKEN = '8077437681:AAG_i0EH3UaWENfTpGEe5Oly-3uP7b_ZfO8';
+            const TELEGRAM_CHAT_ID = '5135065193';
+            const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+            
+            try {
+                const response = await fetch(TELEGRAM_API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        chat_id: TELEGRAM_CHAT_ID,
+                        text: telegramMessage,
+                        parse_mode: 'Markdown',
+                    }),
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok && data.ok) {
+                    // Success
+                    successMessage.classList.remove('hidden');
+                    form.reset();
+                    
+                    // Scroll to success message
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                } else {
+                    // Error
+                    console.error('Telegram API error:', data);
+                    errorMessage.classList.remove('hidden');
+                }
+            } catch (error) {
+                console.error('Error sending message:', error);
+                errorMessage.classList.remove('hidden');
+            } finally {
+                // Re-enable submit button
+                submitButton.disabled = false;
+                submitButton.innerHTML = '<span>Send Message</span><i class="fas fa-paper-plane ml-2"></i>';
+            }
+        });
+    </script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animation
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    </script>
+    
+    <!-- Particles.js initialization -->
+    <script>
+        // Initialize particles.js
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#ffffff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 2, direction: "none", random: false, straight: false }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "grab" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+        
+        // Initialize typed.js
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                var typed = new Typed('#typed-text', {
+                    strings: [
+                        "Building <span class='text-yellow-300'>intelligent solutions</span> with AI",
+                        "Specializing in <span class='text-yellow-300'>NLP</span> and <span class='text-yellow-300'>LLM</span> applications",
+                        "Transforming <span class='text-yellow-300'>complex problems</span> into <span class='text-yellow-300'>elegant solutions</span>"
+                    ],
+                    typeSpeed: 40,
+                    backSpeed: 20,
+                    backDelay: 3000,
+                    startDelay: 1000,
+                    loop: true,
+                    smartBackspace: true,
+                    showCursor: true,
+                    cursorChar: '|',
+                    autoInsertCss: true,
+                    contentType: 'html'
+                });
+            }, 500); // Slight delay to ensure elements are fully loaded
+        });
+    </script>
+    </div> <!-- End desktop-content -->
+</body>
+</html>
+
