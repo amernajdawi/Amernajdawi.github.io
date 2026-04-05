@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Amer Alnajdawi - AI & Software Developer specializing in LLM and RAG-based applications, NLP, and AI solutions.">
+    <meta name="description" content="Amer Alnajdawi — AI engineer building LLM, RAG, and NLP systems for production. Vienna-based; Python, LangChain, cloud &amp; APIs.">
     <meta name="keywords" content="AI, NLP, Software Developer, LLM, RAG, Machine Learning, Python">
     <meta name="author" content="Amer Alnajdawi">
     <!-- Open Graph for Social Media -->
@@ -22,7 +22,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <title>Amer Alnajdawi - AI & Software Developer</title>
+    <title>Amer Alnajdawi — AI Engineer | LLMs, NLP &amp; Production Systems</title>
     <!-- Updated timestamp: 2024-07-14 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -33,27 +33,70 @@
     <!-- Typed.js for text animation -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
         
         :root {
-            --primary: #4f46e5;
-            --primary-dark: #4338ca;
-            --secondary: #10b981;
-            --dark: #1e293b;
+            --primary: #4338ca;
+            --primary-dark: #3730a3;
+            --accent: #22d3ee;
+            --dark: #0f172a;
             --light: #f8fafc;
+            --surface: #f1f5f9;
         }
         
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
             scroll-behavior: smooth;
-            line-height: 1.8;
+            line-height: 1.65;
+            color: #334155;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        h1, h2, h3, .font-display {
+            font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+            letter-spacing: -0.02em;
         }
         
         .gradient-bg {
-            background: linear-gradient(135deg, var(--primary), #7c3aed);
+            background: linear-gradient(155deg, #0f172a 0%, #1e1b4b 42%, #312e81 78%, #1e3a5f 100%);
             position: relative;
             overflow: hidden;
+        }
+        
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset;
+        }
+        
+        .hero-photo-frame {
+            position: relative;
+            max-width: 22rem;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-photo-frame::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 1.15rem;
+            background: linear-gradient(135deg, rgba(34, 211, 238, 0.35), rgba(99, 102, 241, 0.4), rgba(129, 140, 248, 0.2));
+            z-index: 0;
+            opacity: 0.85;
+        }
+        
+        .hero-photo-inner {
+            position: relative;
+            z-index: 1;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(15, 23, 42, 0.4);
         }
         
         #particles-js {
@@ -77,24 +120,14 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 60%);
+            background: radial-gradient(ellipse 70% 50% at 20% 30%, rgba(99, 102, 241, 0.15) 0%, transparent 55%),
+                        radial-gradient(ellipse 60% 45% at 85% 70%, rgba(34, 211, 238, 0.08) 0%, transparent 50%);
             pointer-events: none;
         }
         
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        
-        .ai-icon {
-            animation: float 6s ease-in-out infinite;
-            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
         }
         
         .nav-link {
@@ -126,7 +159,8 @@
         
         .contact-input:focus {
             outline: none;
-            box-shadow: 0 0 0 2px var(--primary);
+            box-shadow: 0 0 0 2px rgba(67, 56, 202, 0.35);
+            border-color: #a5b4fc;
         }
         
         .section-spacing {
@@ -146,23 +180,20 @@
             left: 0;
             width: 100%;
             height: 40%;
-            background-color: rgba(79, 70, 229, 0.2);
+            background: linear-gradient(90deg, rgba(34, 211, 238, 0.25), rgba(129, 140, 248, 0.3));
             z-index: -1;
         }
         
         .btn-pulse {
-            animation: pulse 2s infinite;
+            animation: pulse-soft 3s ease-in-out infinite;
         }
         
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.4);
+        @keyframes pulse-soft {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.12);
             }
-            70% {
-                box-shadow: 0 0 0 10px rgba(79, 70, 229, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(79, 70, 229, 0);
+            50% {
+                box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
             }
         }
         
@@ -256,9 +287,9 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle at 30% 20%, rgba(79, 70, 229, 0.03) 0%, transparent 50%),
-                        radial-gradient(circle at 70% 80%, rgba(124, 58, 237, 0.03) 0%, transparent 50%);
-            animation: pulse 6s ease-in-out infinite;
+            background: radial-gradient(circle at 30% 20%, rgba(67, 56, 202, 0.04) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(34, 211, 238, 0.03) 0%, transparent 50%);
+            animation: mobile-ambient 10s ease-in-out infinite;
             pointer-events: none;
         }
         
@@ -388,6 +419,44 @@
         .mobile-skill:nth-child(14) { animation-delay: 2.5s; }
         .mobile-skill:nth-child(15) { animation-delay: 2.6s; }
         .mobile-skill:nth-child(16) { animation-delay: 2.7s; }
+        .mobile-skill:nth-child(17) { animation-delay: 2.8s; }
+        .mobile-skill:nth-child(18) { animation-delay: 2.9s; }
+        .mobile-skill:nth-child(19) { animation-delay: 3.0s; }
+        .mobile-skill:nth-child(20) { animation-delay: 3.1s; }
+        .mobile-skill:nth-child(21) { animation-delay: 3.2s; }
+        .mobile-skill:nth-child(22) { animation-delay: 3.3s; }
+        .mobile-skill:nth-child(23) { animation-delay: 3.4s; }
+        .mobile-skill:nth-child(24) { animation-delay: 3.5s; }
+        .mobile-skill:nth-child(25) { animation-delay: 3.6s; }
+        .mobile-skill:nth-child(26) { animation-delay: 3.7s; }
+        .mobile-skill:nth-child(27) { animation-delay: 3.8s; }
+        .mobile-skill:nth-child(28) { animation-delay: 3.9s; }
+        .mobile-skill:nth-child(29) { animation-delay: 4.0s; }
+        
+        .mobile-skill-group {
+            margin-bottom: 1.35rem;
+        }
+        .mobile-skill-group:last-of-type {
+            margin-bottom: 0;
+        }
+        .mobile-skill-group-title {
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #4f46e5;
+            margin-bottom: 0.6rem;
+            text-align: center;
+            opacity: 0.95;
+        }
+        .mobile-skill-long {
+            font-size: 0.65rem;
+            padding-left: 12px;
+            padding-right: 12px;
+            line-height: 1.35;
+            max-width: 100%;
+            text-align: center;
+        }
         
         .mobile-projects {
             text-align: left;
@@ -531,12 +600,11 @@
             font-weight: 600;
             letter-spacing: 0.025em;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            animation: pulse 3s infinite;
             position: relative;
             overflow: hidden;
             box-shadow: 
-                0 8px 24px rgba(79, 70, 229, 0.25),
-                0 0 0 1px rgba(255, 255, 255, 0.1);
+                0 8px 24px rgba(49, 46, 129, 0.2),
+                0 0 0 1px rgba(255, 255, 255, 0.12);
             backdrop-filter: blur(10px);
         }
         
@@ -623,16 +691,9 @@
             }
         }
         
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.4);
-            }
-            70% {
-                box-shadow: 0 0 0 10px rgba(79, 70, 229, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(79, 70, 229, 0);
-            }
+        @keyframes mobile-ambient {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.85; transform: scale(1.02); }
         }
         
         /* Professional Section Styling */
@@ -1076,33 +1137,69 @@
     </script>
     -->
 </head>
-<body class="bg-gray-50">
+<body class="bg-slate-50 text-slate-700">
     <!-- Mobile Content (shown on mobile devices) -->
     <div class="mobile-content">
         <div class="mobile-card">
-            <img src="IMG_3119.JPEG" alt="Amer Alnajdawi Profile">
+            <img src="amer-768x732.jpg" alt="Amer Alnajdawi Profile">
             <h1>Amer Alnajdawi</h1>
-            <h2>AI & Software Developer</h2>
+            <h2>AI Engineer</h2>
             <p>
                 A passionate and results-driven Artificial Intelligence professional currently pursuing a Master's degree in AI, with a specialization in Natural Language Processing. Possessing a strong background in developing AI-powered solutions, including LLM and RAG-based applications, for real-world challenges. Actively involved in problem-solving competitions, demonstrating a commitment to continuous learning and innovation in AI. Eager to leverage expertise in AI and NLP to contribute to dynamic projects and drive technological advancements.
             </p>
             
             <section>
                 <h3>Skills</h3>
-                <div class="mobile-skills">
-                    <span class="mobile-skill">LLMs</span>
-                    <span class="mobile-skill">Prompting</span>
-                    <span class="mobile-skill">HuggingFace</span>
-                    <span class="mobile-skill">SpaCy</span>
-                    <span class="mobile-skill">Panda</span>
-                    <span class="mobile-skill">Git</span>
-                    <span class="mobile-skill">Computer Vision</span>
-                    <span class="mobile-skill">NLP</span>
-                    <span class="mobile-skill">LangChain</span>
-                    <span class="mobile-skill">Python</span>
-                    <span class="mobile-skill">APIs</span>
-                    <span class="mobile-skill">DevOps</span>
-                    <span class="mobile-skill">Docker</span>
+                <div class="mobile-skills" style="flex-direction: column; align-items: stretch; gap: 0;">
+                    <div class="mobile-skill-group">
+                        <p class="mobile-skill-group-title">AI &amp; machine learning</p>
+                        <div class="mobile-skills" style="margin-bottom: 0;">
+                            <span class="mobile-skill">AI/ML</span>
+                            <span class="mobile-skill mobile-skill-long">LLMs (Open &amp; Closed Source)</span>
+                            <span class="mobile-skill">NLP</span>
+                            <span class="mobile-skill">Computer Vision</span>
+                            <span class="mobile-skill">RAG</span>
+                            <span class="mobile-skill">AI Agents</span>
+                            <span class="mobile-skill">Prompt Engineering</span>
+                            <span class="mobile-skill">MCP</span>
+                            <span class="mobile-skill">Hugging Face</span>
+                            <span class="mobile-skill">LangChain</span>
+                            <span class="mobile-skill">Chatbots</span>
+                        </div>
+                    </div>
+                    <div class="mobile-skill-group">
+                        <p class="mobile-skill-group-title">Data &amp; analytics</p>
+                        <div class="mobile-skills" style="margin-bottom: 0;">
+                            <span class="mobile-skill">Python</span>
+                            <span class="mobile-skill">NumPy</span>
+                            <span class="mobile-skill">Pandas</span>
+                            <span class="mobile-skill">spaCy</span>
+                            <span class="mobile-skill">Data Processing</span>
+                            <span class="mobile-skill">KPI Analysis</span>
+                            <span class="mobile-skill">Web Scraping</span>
+                            <span class="mobile-skill">Data Visualization</span>
+                        </div>
+                    </div>
+                    <div class="mobile-skill-group">
+                        <p class="mobile-skill-group-title">Databases &amp; APIs</p>
+                        <div class="mobile-skills" style="margin-bottom: 0;">
+                            <span class="mobile-skill">PostgreSQL</span>
+                            <span class="mobile-skill">MongoDB</span>
+                            <span class="mobile-skill">APIs</span>
+                            <span class="mobile-skill">Postman</span>
+                        </div>
+                    </div>
+                    <div class="mobile-skill-group">
+                        <p class="mobile-skill-group-title">Engineering &amp; delivery</p>
+                        <div class="mobile-skills" style="margin-bottom: 0;">
+                            <span class="mobile-skill">Git</span>
+                            <span class="mobile-skill">Docker</span>
+                            <span class="mobile-skill">DevOps</span>
+                            <span class="mobile-skill mobile-skill-long">Cloud Applications</span>
+                            <span class="mobile-skill">Automation</span>
+                            <span class="mobile-skill">Web Development</span>
+                        </div>
+                    </div>
                 </div>
             </section>
             
@@ -1303,7 +1400,7 @@
                     <a href="mailto:amer.alnajdawi@example.com">📧 Email</a>
                 </div>
                 <div class="mobile-cv">
-                    <a href="https://github.com/amernajdawi/Amernajdawi.github.io/raw/main/AmerNajdawi.pdf" download="AmerNajdawi.pdf" target="_blank" rel="noopener" type="application/pdf">📄 Download CV</a>
+                    <a href="https://github.com/amernajdawi/Amernajdawi.github.io/raw/main/Amer_Alnajdawi_CV.pdf" download="Amer_Alnajdawi_CV.pdf" target="_blank" rel="noopener" type="application/pdf">📄 Download CV</a>
                 </div>
             </footer>
         </div>
@@ -1312,23 +1409,24 @@
     <!-- Desktop Content (shown on desktop devices) -->
     <div class="desktop-content">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-white shadow-md z-50" role="navigation" aria-label="Main navigation">
+    <nav class="fixed w-full z-50 nav-glass" role="navigation" aria-label="Main navigation">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
+            <div class="flex justify-between h-[4.25rem] items-center">
                 <div class="flex items-center">
-                    <div class="flex-shrink-0 flex items-center">
-                        <span class="text-xl font-bold text-gray-900">Amer Alnajdawi</span>
+                    <div class="flex-shrink-0 flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
+                        <span class="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">Amer Alnajdawi</span>
+                        <span class="hidden sm:inline text-xs font-semibold uppercase tracking-widest text-indigo-600/90">AI Engineer</span>
                     </div>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home" class="nav-link text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Home</a>
-                        <a href="#about" class="nav-link text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">About</a>
-                        <a href="#experience" class="nav-link text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Experience</a>
-                        <a href="#education" class="nav-link text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Education</a>
-                        <a href="#projects" class="nav-link text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Projects</a>
-                        <a href="#skills" class="nav-link text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Skills</a>
-                        <a href="#contact" class="nav-link text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Contact</a>
+                        <a href="#home" class="nav-link text-slate-700 hover:text-indigo-600 px-3 py-2 text-sm font-semibold">Home</a>
+                        <a href="#about" class="nav-link text-slate-700 hover:text-indigo-600 px-3 py-2 text-sm font-semibold">About</a>
+                        <a href="#experience" class="nav-link text-slate-700 hover:text-indigo-600 px-3 py-2 text-sm font-semibold">Experience</a>
+                        <a href="#education" class="nav-link text-slate-700 hover:text-indigo-600 px-3 py-2 text-sm font-semibold">Education</a>
+                        <a href="#projects" class="nav-link text-slate-700 hover:text-indigo-600 px-3 py-2 text-sm font-semibold">Projects</a>
+                        <a href="#skills" class="nav-link text-slate-700 hover:text-indigo-600 px-3 py-2 text-sm font-semibold">Skills</a>
+                        <a href="#contact" class="nav-link text-slate-700 hover:text-indigo-600 px-3 py-2 text-sm font-semibold">Contact</a>
                     </div>
                 </div>
                 <div class="md:hidden">
@@ -1342,62 +1440,59 @@
         </div>
         
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg transition-all duration-300 ease-in-out" role="menu" aria-labelledby="mobile-menu-button">
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-lg transition-all duration-300 ease-in-out" role="menu" aria-labelledby="mobile-menu-button">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600" role="menuitem">Home</a>
-                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600" role="menuitem">About</a>
-                <a href="#experience" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600" role="menuitem">Experience</a>
-                <a href="#education" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600" role="menuitem">Education</a>
-                <a href="#projects" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600" role="menuitem">Projects</a>
-                <a href="#skills" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600" role="menuitem">Skills</a>
-                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600" role="menuitem">Contact</a>
+                <a href="#home" class="block px-3 py-2 text-base font-semibold text-slate-800 hover:text-indigo-600 rounded-lg hover:bg-slate-50" role="menuitem">Home</a>
+                <a href="#about" class="block px-3 py-2 text-base font-semibold text-slate-800 hover:text-indigo-600 rounded-lg hover:bg-slate-50" role="menuitem">About</a>
+                <a href="#experience" class="block px-3 py-2 text-base font-semibold text-slate-800 hover:text-indigo-600 rounded-lg hover:bg-slate-50" role="menuitem">Experience</a>
+                <a href="#education" class="block px-3 py-2 text-base font-semibold text-slate-800 hover:text-indigo-600 rounded-lg hover:bg-slate-50" role="menuitem">Education</a>
+                <a href="#projects" class="block px-3 py-2 text-base font-semibold text-slate-800 hover:text-indigo-600 rounded-lg hover:bg-slate-50" role="menuitem">Projects</a>
+                <a href="#skills" class="block px-3 py-2 text-base font-semibold text-slate-800 hover:text-indigo-600 rounded-lg hover:bg-slate-50" role="menuitem">Skills</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-semibold text-slate-800 hover:text-indigo-600 rounded-lg hover:bg-slate-50" role="menuitem">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="gradient-bg text-white pt-32 pb-24 md:pt-40 md:pb-32">
+    <section id="home" class="gradient-bg text-white pt-28 pb-20 md:pt-36 md:pb-28">
         <div id="particles-js"></div>
         <div class="hero-content">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-            <div class="md:flex items-center justify-between">
-                    <div class="md:w-1/2 mb-16 md:mb-0" data-aos="fade-right" data-aos-delay="100">
-                        <div class="inline-block px-3 py-1 rounded-full bg-white bg-opacity-20 text-white text-xs font-semibold mb-4">
-                            AI & Software Developer
-                    </div>
-                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 text-reveal">
-                            <span class="text-white">Amer</span> <span class="text-indigo-100 highlight-box">Alnajdawi</span>
+            <div class="md:flex md:items-center md:justify-between md:gap-12 lg:gap-16">
+                    <div class="md:w-1/2 mb-14 md:mb-0" data-aos="fade-right" data-aos-delay="100">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/20 bg-white/10 text-white/95 text-xs font-semibold tracking-wide mb-5 backdrop-blur-sm">
+                            <span class="h-1.5 w-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]" aria-hidden="true"></span>
+                            AI Engineer · LLMs, NLP &amp; production systems
+                        </div>
+                        <h1 class="text-3xl md:text-4xl lg:text-[2.75rem] font-extrabold leading-[1.15] mb-6 text-reveal">
+                            <span class="text-white">Amer</span> <span class="text-cyan-100 highlight-box">Alnajdawi</span>
                     </h1>
-                        <div class="h-20 md:h-16"> <!-- Reduced height container for typing animation -->
-                            <p class="text-lg md:text-xl opacity-90 leading-relaxed max-w-xl">
+                        <div class="min-h-[5rem] md:min-h-[4rem]">
+                            <p class="text-base md:text-lg text-slate-300 leading-relaxed max-w-xl">
                                 <span id="typed-text"></span>
                             </p>
                         </div>
-                        <div class="flex flex-col sm:flex-row gap-4 mt-6">
-                            <a href="https://github.com/amernajdawi/Amernajdawi.github.io/raw/main/AmerNajdawi.pdf" download="AmerNajdawi.pdf" target="_blank" rel="noopener" type="application/pdf" class="bg-white text-indigo-600 hover:bg-yellow-300 hover:text-gray-900 font-semibold py-3 px-6 rounded-lg transition duration-300 text-center text-base btn-pulse flex items-center justify-center">
+                        <div class="flex flex-col sm:flex-row flex-wrap gap-3 mt-8">
+                            <a href="https://github.com/amernajdawi/Amernajdawi.github.io/raw/main/Amer_Alnajdawi_CV.pdf" download="Amer_Alnajdawi_CV.pdf" target="_blank" rel="noopener" type="application/pdf" class="bg-white text-slate-900 hover:bg-slate-100 font-semibold py-3 px-6 rounded-xl transition duration-300 text-center text-sm sm:text-base btn-pulse shadow-lg shadow-black/20 flex items-center justify-center gap-2">
                                 <span>Download CV</span>
-                                <i class="fas fa-file-download ml-2"></i>
+                                <i class="fas fa-file-pdf text-indigo-600" aria-hidden="true"></i>
                             </a>
-                            <a href="#contact" class="bg-indigo-100 text-indigo-600 hover:bg-indigo-600 hover:text-white font-semibold py-3 px-6 rounded-lg transition duration-300 text-center text-base flex items-center justify-center">
-                                <span>Contact Me</span>
-                            <i class="fas fa-arrow-right ml-2"></i>
+                            <a href="#contact" class="bg-white/10 text-white border border-white/25 hover:bg-white/15 font-semibold py-3 px-6 rounded-xl transition duration-300 text-center text-sm sm:text-base flex items-center justify-center gap-2 backdrop-blur-sm">
+                                <span>Contact</span>
+                            <i class="fas fa-arrow-right text-cyan-300" aria-hidden="true"></i>
                         </a>
-                            <a href="#projects" class="border-2 border-white text-white hover:bg-white hover:text-indigo-600 font-semibold py-3 px-6 rounded-lg transition duration-300 text-center text-base flex items-center justify-center">
-                                <span>My Projects</span>
-                            <i class="fas fa-chevron-down ml-2"></i>
+                            <a href="#projects" class="border border-white/35 text-white/95 hover:bg-white/10 font-semibold py-3 px-6 rounded-xl transition duration-300 text-center text-sm sm:text-base flex items-center justify-center gap-2">
+                                <span>Selected work</span>
+                            <i class="fas fa-layer-group text-white/70" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
-                    <div class="md:w-1/2 flex justify-center" data-aos="fade-left" data-aos-delay="300">
-                        <div class="relative">
-                            <div class="ai-icon">
-                                <div class="w-72 h-72 flex items-center justify-center">
-                                    <i class="fas fa-code-branch text-6xl text-white"></i>
-                                </div>
+                    <div class="md:w-1/2 flex justify-center md:justify-end" data-aos="fade-left" data-aos-delay="200">
+                        <div class="hero-photo-frame">
+                            <div class="hero-photo-inner">
+                                <img src="amer-768x732.jpg" alt="Amer Alnajdawi — AI engineer" class="w-full aspect-square object-cover object-[center_20%] block" width="768" height="732" loading="eager" fetchpriority="high">
                             </div>
-                            <div class="absolute -bottom-5 -left-5 bg-yellow-400 rounded-full w-32 h-32 opacity-30 animate-pulse"></div>
-                            <div class="absolute -top-5 -right-5 bg-indigo-400 rounded-full w-28 h-28 opacity-30 animate-pulse"></div>
-                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-indigo-500 opacity-20 rounded-full animate-ping" style="animation-duration: 3s;"></div>
+                            <p class="mt-4 text-center md:text-right text-sm text-slate-400 font-medium tracking-wide">Vienna, Austria</p>
                         </div>
                     </div>
                 </div>
@@ -1406,63 +1501,61 @@
     </section>
 
     <!-- About Me Section -->
-    <section id="about" class="section-spacing bg-white">
+    <section id="about" class="section-spacing bg-slate-50 border-t border-slate-200/60">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div class="md:flex items-center">
                 <div class="md:w-2/5 mb-10 md:mb-0" data-aos="fade-right">
-                    <div class="relative">
-                        <img src="IMG_3119.JPEG" alt="Amer Alnajdawi" class="rounded-xl shadow-lg w-full object-cover" loading="lazy">
-                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-indigo-500 opacity-20 rounded-lg transform rotate-12"></div>
-                        <div class="absolute -top-6 -left-6 w-32 h-32 bg-yellow-300 opacity-20 rounded-lg transform -rotate-12"></div>
+                    <div class="relative rounded-2xl p-1 bg-gradient-to-br from-indigo-200/60 via-slate-200/40 to-cyan-200/50 shadow-xl shadow-slate-300/40">
+                        <img src="amer-768x732.jpg" alt="Amer Alnajdawi" class="rounded-[0.85rem] w-full aspect-square object-cover object-[center_20%] ring-1 ring-slate-200/80" loading="lazy" width="768" height="732">
                     </div>
                 </div>
                 <div class="md:w-3/5 md:pl-16" data-aos="fade-left" data-aos-delay="200">
-                    <div class="inline-block px-4 py-1 rounded-full bg-indigo-100 text-indigo-600 text-sm font-semibold mb-4">About Me</div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    <div class="inline-block px-4 py-1 rounded-full border border-indigo-200/80 bg-white text-indigo-700 text-sm font-semibold mb-4 shadow-sm">About</div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
                         <span class="relative">
-                            <span class="relative z-10">AI & Software</span>
-                            <span class="absolute bottom-1 left-0 w-full h-3 bg-indigo-100 -z-10"></span>
+                            <span class="relative z-10">Building reliable</span>
+                            <span class="absolute bottom-1 left-0 w-full h-3 bg-indigo-100/90 -z-10"></span>
                         </span>
-                        <span class="text-indigo-600 ml-2">Development</span>
+                        <span class="text-indigo-600 ml-2">AI products</span>
                     </h2>
-                    <p class="text-gray-600 mb-6 text-lg">
+                    <p class="text-slate-600 mb-6 text-lg leading-relaxed">
                         A passionate and results-driven Artificial Intelligence professional currently pursuing a Master's degree in AI, with a specialization in Natural Language Processing. Possessing a strong background in developing AI-powered solutions, including LLM and RAG-based applications, for real-world challenges.
                     </p>
-                    <p class="text-gray-600 mb-8 text-lg">
+                    <p class="text-slate-600 mb-8 text-lg leading-relaxed">
                         Actively involved in problem-solving competitions, demonstrating a commitment to continuous learning and innovation in AI. Eager to leverage expertise in AI and NLP to contribute to dynamic projects and drive technological advancements.
                     </p>
-                    <div class="grid grid-cols-2 gap-x-8 gap-y-4 mb-8">
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                    <div class="grid grid-cols-2 gap-x-6 gap-y-4 mb-8">
+                        <div class="flex items-center rounded-xl bg-white/80 border border-slate-200/80 px-3 py-2.5 shadow-sm">
+                            <div class="w-10 h-10 bg-indigo-50 rounded-lg flex items-center justify-center mr-3 shrink-0">
                                 <i class="fas fa-brain text-indigo-600"></i>
                             </div>
-                            <span class="text-gray-700 font-medium">AI Development</span>
+                            <span class="text-slate-800 font-semibold text-sm">LLM &amp; RAG systems</span>
                         </div>
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                        <div class="flex items-center rounded-xl bg-white/80 border border-slate-200/80 px-3 py-2.5 shadow-sm">
+                            <div class="w-10 h-10 bg-indigo-50 rounded-lg flex items-center justify-center mr-3 shrink-0">
                                 <i class="fas fa-comments text-indigo-600"></i>
                             </div>
-                            <span class="text-gray-700 font-medium">NLP Specialist</span>
+                            <span class="text-slate-800 font-semibold text-sm">NLP</span>
                         </div>
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                        <div class="flex items-center rounded-xl bg-white/80 border border-slate-200/80 px-3 py-2.5 shadow-sm">
+                            <div class="w-10 h-10 bg-indigo-50 rounded-lg flex items-center justify-center mr-3 shrink-0">
                                 <i class="fas fa-code text-indigo-600"></i>
                             </div>
-                            <span class="text-gray-700 font-medium">Software Engineering</span>
+                            <span class="text-slate-800 font-semibold text-sm">Production code</span>
                         </div>
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                        <div class="flex items-center rounded-xl bg-white/80 border border-slate-200/80 px-3 py-2.5 shadow-sm">
+                            <div class="w-10 h-10 bg-indigo-50 rounded-lg flex items-center justify-center mr-3 shrink-0">
                                 <i class="fas fa-graduation-cap text-indigo-600"></i>
                             </div>
-                            <span class="text-gray-700 font-medium">Continuous Learner</span>
+                            <span class="text-slate-800 font-semibold text-sm">Research mindset</span>
                         </div>
                     </div>
-                    <div class="flex gap-4">
-                        <a href="https://linkedin.com/in/amer-alnajdawi" target="_blank" class="bg-[#0077B5] hover:bg-[#00669c] text-white font-semibold py-3 px-6 rounded-lg transition duration-300 inline-flex items-center">
-                            <i class="fab fa-linkedin-in mr-2"></i> LinkedIn
+                    <div class="flex flex-wrap gap-3">
+                        <a href="https://linkedin.com/in/amer-alnajdawi" target="_blank" rel="noopener noreferrer" class="bg-[#0A66C2] hover:bg-[#095195] text-white font-semibold py-3 px-6 rounded-xl transition duration-300 inline-flex items-center gap-2 shadow-md shadow-slate-300/50">
+                            <i class="fab fa-linkedin-in"></i> LinkedIn
                         </a>
-                        <a href="https://github.com/amernajdawi" target="_blank" class="bg-[#333] hover:bg-[#555] text-white font-semibold py-3 px-6 rounded-lg transition duration-300 inline-flex items-center">
-                            <i class="fab fa-github mr-2"></i> GitHub
+                        <a href="https://github.com/amernajdawi" target="_blank" rel="noopener noreferrer" class="bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3 px-6 rounded-xl transition duration-300 inline-flex items-center gap-2 shadow-md shadow-slate-300/50">
+                            <i class="fab fa-github"></i> GitHub
                         </a>
                     </div>
                 </div>
@@ -1471,7 +1564,7 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="section-spacing bg-white">
+    <section id="experience" class="section-spacing bg-white border-t border-slate-200/60">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div class="text-center mb-20" data-aos="fade-up">
                 <div class="inline-block px-4 py-1 rounded-full bg-indigo-100 text-indigo-600 text-sm font-semibold mb-4">My Experience</div>
@@ -1482,14 +1575,13 @@
                     </span>
                     <span class="text-indigo-600 ml-2">Experience</span>
                 </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-                    A track record of developing AI-powered solutions and software applications for real-world challenges.
+                <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
+                    Shipping AI-powered products end to end—from research and model integration to APIs, data, and deployment.
                 </p>
-                <div class="flex justify-center space-x-3 mb-12">
-                    <div class="w-4 h-4 rounded-full bg-indigo-500"></div>
-                    <div class="w-4 h-4 rounded-full bg-blue-500"></div>
-                    <div class="w-4 h-4 rounded-full bg-green-500"></div>
-                    <div class="w-4 h-4 rounded-full bg-orange-500"></div>
+                <div class="flex justify-center gap-2 mb-12" aria-hidden="true">
+                    <div class="h-1 w-10 rounded-full bg-indigo-500"></div>
+                    <div class="h-1 w-10 rounded-full bg-cyan-500 opacity-80"></div>
+                    <div class="h-1 w-10 rounded-full bg-violet-500 opacity-80"></div>
                 </div>
             </div>
             
@@ -1642,7 +1734,7 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="bg-white py-20">
+    <section id="education" class="bg-slate-50 py-20 border-t border-slate-200/60">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div class="text-center mb-16" data-aos="fade-up">
                 <div class="inline-block px-4 py-1 rounded-full bg-indigo-100 text-indigo-600 text-sm font-semibold mb-4">My Education</div>
@@ -1656,7 +1748,7 @@
                 </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2" data-aos="flip-left" data-aos-delay="100">
+                <div class="bg-white border border-slate-200/90 p-8 rounded-2xl shadow-md shadow-slate-200/50 transition-all duration-300 hover:shadow-lg hover:border-indigo-200/60 hover:-translate-y-0.5" data-aos="flip-left" data-aos-delay="100">
                     <div class="flex items-start mb-4">
                         <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
                             <i class="fas fa-graduation-cap text-indigo-600"></i>
@@ -1670,7 +1762,7 @@
                     </div>
                 </div>
                 
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2" data-aos="flip-right" data-aos-delay="200">
+                <div class="bg-white border border-slate-200/90 p-8 rounded-2xl shadow-md shadow-slate-200/50 transition-all duration-300 hover:shadow-lg hover:border-indigo-200/60 hover:-translate-y-0.5" data-aos="flip-right" data-aos-delay="200">
                     <div class="flex items-start mb-4">
                         <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
                             <i class="fas fa-graduation-cap text-indigo-600"></i>
@@ -1704,7 +1796,7 @@
     </div>
 
     <!-- Projects Section -->
-    <section id="projects" class="section-spacing bg-gray-50">
+    <section id="projects" class="section-spacing bg-white border-t border-slate-200/60">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div class="text-center mb-20" data-aos="fade-up">
                 <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -1834,7 +1926,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section-spacing bg-white">
+    <section id="skills" class="section-spacing bg-slate-50 border-t border-slate-200/60">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div class="text-center mb-20" data-aos="fade-up">
                 <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -1845,69 +1937,98 @@
                     <span class="text-indigo-600 ml-2">Skills</span>
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    A diverse set of technical skills that enable me to develop innovative AI-powered solutions.
+                    From research-grade AI to production systems—grouped by how I apply them in real projects.
                 </p>
             </div>
             
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="100">
-                    <i class="fas fa-brain text-5xl text-indigo-600 mb-4"></i>
-                    <span class="text-gray-700 font-medium">LLMs</span>
+            <div class="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
+                <article class="rounded-2xl border border-slate-200/90 bg-gradient-to-br from-white via-slate-50/40 to-indigo-50/30 p-6 sm:p-8 shadow-sm hover:shadow-lg hover:border-indigo-200/70 transition-all duration-300" data-aos="fade-up" data-aos-delay="80">
+                    <div class="flex items-start gap-4 mb-5">
+                        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-lg shadow-indigo-500/30" aria-hidden="true">
+                            <i class="fas fa-brain text-xl"></i>
                         </div>
-                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="150">
-                    <i class="fas fa-comment-dots text-5xl text-green-500 mb-4"></i>
-                    <span class="text-gray-700 font-medium">Prompting</span>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 leading-tight">AI &amp; machine learning</h3>
+                            <p class="text-sm text-gray-500 mt-1">Models, agents, and intelligent products</p>
                         </div>
-                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="200">
-                    <i class="fas fa-file-code text-5xl text-blue-500 mb-4"></i>
-                    <span class="text-gray-700 font-medium">Huggingface</span>
                     </div>
-                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="250">
-                    <i class="fas fa-language text-5xl text-orange-500 mb-4"></i>
-                    <span class="text-gray-700 font-medium">SpaCy</span>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">AI/ML</span>
+                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">LLMs (Open &amp; Closed Source)</span>
+                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">NLP</span>
+                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">Computer Vision</span>
+                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">RAG</span>
+                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">AI Agents</span>
+                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">Prompt Engineering</span>
+                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">MCP</span>
+                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">Hugging Face</span>
+                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">LangChain</span>
+                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">Chatbots</span>
                     </div>
-                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="300">
-                    <i class="fas fa-table text-5xl text-blue-500 mb-4"></i>
-                    <span class="text-gray-700 font-medium">Panda</span>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="700">
-                    <i class="fas fa-server text-5xl text-gray-600 mb-4"></i>
-                    <span class="text-gray-700 font-medium">DevOps</span>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="350">
-                    <i class="fab fa-git-alt text-5xl text-red-600 mb-4"></i>
-                    <span class="text-gray-700 font-medium">Git</span>
+                </article>
+                <article class="rounded-2xl border border-slate-200/90 bg-gradient-to-br from-white via-emerald-50/20 to-teal-50/30 p-6 sm:p-8 shadow-sm hover:shadow-lg hover:border-emerald-200/70 transition-all duration-300" data-aos="fade-up" data-aos-delay="120">
+                    <div class="flex items-start gap-4 mb-5">
+                        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-600 text-white shadow-lg shadow-emerald-500/30" aria-hidden="true">
+                            <i class="fas fa-chart-line text-xl"></i>
                         </div>
-                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="400">
-                    <i class="fas fa-eye text-5xl text-purple-500 mb-4"></i>
-                    <span class="text-gray-700 font-medium">Computer Vision</span>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 leading-tight">Data &amp; analytics</h3>
+                            <p class="text-sm text-gray-500 mt-1">Pipelines, metrics, and insight</p>
                         </div>
-                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="450">
-                    <i class="fas fa-comments text-5xl text-indigo-500 mb-4"></i>
-                    <span class="text-gray-700 font-medium">NLP</span>
                     </div>
-                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="500">
-                    <i class="fas fa-link text-5xl text-green-500 mb-4"></i>
-                    <span class="text-gray-700 font-medium">LangChain</span>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="inline-flex items-center rounded-full border border-emerald-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-emerald-300 hover:bg-emerald-50/80 transition-colors duration-200">Python</span>
+                        <span class="inline-flex items-center rounded-full border border-emerald-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-emerald-300 hover:bg-emerald-50/80 transition-colors duration-200">NumPy</span>
+                        <span class="inline-flex items-center rounded-full border border-emerald-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-emerald-300 hover:bg-emerald-50/80 transition-colors duration-200">Pandas</span>
+                        <span class="inline-flex items-center rounded-full border border-emerald-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-emerald-300 hover:bg-emerald-50/80 transition-colors duration-200">spaCy</span>
+                        <span class="inline-flex items-center rounded-full border border-emerald-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-emerald-300 hover:bg-emerald-50/80 transition-colors duration-200">Data Processing</span>
+                        <span class="inline-flex items-center rounded-full border border-emerald-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-emerald-300 hover:bg-emerald-50/80 transition-colors duration-200">KPI Analysis</span>
+                        <span class="inline-flex items-center rounded-full border border-emerald-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-emerald-300 hover:bg-emerald-50/80 transition-colors duration-200">Web Scraping</span>
+                        <span class="inline-flex items-center rounded-full border border-emerald-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-emerald-300 hover:bg-emerald-50/80 transition-colors duration-200">Data Visualization</span>
                     </div>
-                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="550">
-                    <i class="fab fa-python text-5xl text-blue-600 mb-4"></i>
-                    <span class="text-gray-700 font-medium">Python</span>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="600">
-                    <i class="fas fa-plug text-5xl text-gray-600 mb-4"></i>
-                    <span class="text-gray-700 font-medium">APIs</span>
+                </article>
+                <article class="rounded-2xl border border-slate-200/90 bg-gradient-to-br from-white via-amber-50/25 to-orange-50/20 p-6 sm:p-8 shadow-sm hover:shadow-lg hover:border-amber-200/70 transition-all duration-300" data-aos="fade-up" data-aos-delay="160">
+                    <div class="flex items-start gap-4 mb-5">
+                        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-amber-600 text-white shadow-lg shadow-amber-500/30" aria-hidden="true">
+                            <i class="fas fa-database text-xl"></i>
                         </div>
-                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-all duration-300 hover:shadow-lg hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="650">
-                    <i class="fab fa-docker text-5xl text-blue-500 mb-4"></i>
-                    <span class="text-gray-700 font-medium">Docker</span>
-                </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 leading-tight">Databases &amp; APIs</h3>
+                            <p class="text-sm text-gray-500 mt-1">Storage, integration, and testing</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="inline-flex items-center rounded-full border border-amber-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-amber-300 hover:bg-amber-50/80 transition-colors duration-200">PostgreSQL</span>
+                        <span class="inline-flex items-center rounded-full border border-amber-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-amber-300 hover:bg-amber-50/80 transition-colors duration-200">MongoDB</span>
+                        <span class="inline-flex items-center rounded-full border border-amber-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-amber-300 hover:bg-amber-50/80 transition-colors duration-200">APIs</span>
+                        <span class="inline-flex items-center rounded-full border border-amber-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-amber-300 hover:bg-amber-50/80 transition-colors duration-200">Postman</span>
+                    </div>
+                </article>
+                <article class="rounded-2xl border border-slate-200/90 bg-gradient-to-br from-white via-slate-100/40 to-violet-50/35 p-6 sm:p-8 shadow-sm hover:shadow-lg hover:border-violet-200/70 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-start gap-4 mb-5">
+                        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-violet-600 text-white shadow-lg shadow-violet-500/30" aria-hidden="true">
+                            <i class="fas fa-cloud text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 leading-tight">Engineering &amp; delivery</h3>
+                            <p class="text-sm text-gray-500 mt-1">Ship, scale, and automate</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="inline-flex items-center rounded-full border border-violet-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-violet-300 hover:bg-violet-50/80 transition-colors duration-200">Git</span>
+                        <span class="inline-flex items-center rounded-full border border-violet-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-violet-300 hover:bg-violet-50/80 transition-colors duration-200">Docker</span>
+                        <span class="inline-flex items-center rounded-full border border-violet-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-violet-300 hover:bg-violet-50/80 transition-colors duration-200">DevOps</span>
+                        <span class="inline-flex items-center rounded-full border border-violet-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-violet-300 hover:bg-violet-50/80 transition-colors duration-200">Cloud Applications</span>
+                        <span class="inline-flex items-center rounded-full border border-violet-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-violet-300 hover:bg-violet-50/80 transition-colors duration-200">Automation</span>
+                        <span class="inline-flex items-center rounded-full border border-violet-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-violet-300 hover:bg-violet-50/80 transition-colors duration-200">Web Development</span>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section-spacing bg-indigo-600 text-white" role="region" aria-label="Contact me">
+    <section id="contact" class="section-spacing bg-gradient-to-br from-indigo-700 via-indigo-800 to-slate-900 text-white border-t border-indigo-600/30" role="region" aria-label="Contact me">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div class="md:flex items-center justify-between">
                 <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right" data-aos-delay="100">
@@ -1957,8 +2078,9 @@
                     </div>
                 </div>
                 <div class="md:w-1/2 md:pl-12" data-aos="fade-left" data-aos-delay="150">
-                    <div class="bg-white rounded-xl shadow-xl p-8 text-gray-900">
-                        <h3 class="text-2xl font-bold mb-6">Send Me a Message</h3>
+                    <div class="bg-white rounded-2xl shadow-2xl shadow-slate-900/20 border border-slate-100 p-8 text-gray-900">
+                        <h3 class="text-2xl font-bold mb-2 text-slate-900">Send a message</h3>
+                        <p class="text-slate-500 text-sm mb-6">I typically reply within a few business days.</p>
                         <form id="contactForm">
                             <div class="mb-6">
                                 <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
@@ -1976,7 +2098,7 @@
                                 <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
                                 <textarea id="message" name="message" rows="4" class="contact-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent" placeholder="Your message" required aria-required="true"></textarea>
                             </div>
-                            <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 flex items-center justify-center">
+                            <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-xl transition duration-300 flex items-center justify-center shadow-lg shadow-indigo-900/20">
                                 <span>Send Message</span>
                                 <i class="fas fa-paper-plane ml-2"></i>
                             </button>
@@ -1994,23 +2116,24 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12" role="contentinfo">
+    <footer class="bg-slate-950 text-white py-14 border-t border-slate-800/80" role="contentinfo">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-8 md:mb-0 flex items-center" data-aos="fade-right">
-                    <span class="text-xl font-bold">Amer Alnajdawi</span>
-                    </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex flex-col items-center md:items-start" data-aos="fade-right">
+                    <span class="text-xl font-bold tracking-tight">Amer Alnajdawi</span>
+                    <span class="text-xs font-semibold uppercase tracking-widest text-cyan-400/90 mt-1">AI Engineer</span>
+                </div>
                 
-                <div class="flex space-x-6 mb-8 md:mb-0" data-aos="fade-up">
-                    <a href="https://linkedin.com/in/amer-alnajdawi" target="_blank" class="text-gray-400 hover:text-white transition duration-300" aria-label="LinkedIn">
+                <div class="flex space-x-5" data-aos="fade-up">
+                    <a href="https://linkedin.com/in/amer-alnajdawi" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-cyan-400 transition duration-300 text-lg" aria-label="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://github.com/amernajdawi" target="_blank" class="text-gray-400 hover:text-white transition duration-300" aria-label="GitHub">
+                    <a href="https://github.com/amernajdawi" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition duration-300 text-lg" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
                 
-                <p class="text-gray-400 text-sm" data-aos="fade-left">
+                <p class="text-slate-500 text-sm text-center md:text-right" data-aos="fade-left">
                     &copy; <span id="currentYear">2023</span> Amer Alnajdawi. All rights reserved.
                 </p>
             </div>
@@ -2148,13 +2271,13 @@ ${message}`;
         // Initialize particles.js
         particlesJS('particles-js', {
             particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: "#ffffff" },
+                number: { value: 56, density: { enable: true, value_area: 900 } },
+                color: { value: "#a5b4fc" },
                 shape: { type: "circle" },
-                opacity: { value: 0.5, random: false },
-                size: { value: 3, random: true },
-                line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
-                move: { enable: true, speed: 2, direction: "none", random: false, straight: false }
+                opacity: { value: 0.35, random: true },
+                size: { value: 2, random: true },
+                line_linked: { enable: true, distance: 140, color: "#22d3ee", opacity: 0.12, width: 1 },
+                move: { enable: true, speed: 1, direction: "none", random: false, straight: false }
             },
             interactivity: {
                 detect_on: "canvas",
@@ -2172,9 +2295,9 @@ ${message}`;
             setTimeout(function() {
                 var typed = new Typed('#typed-text', {
                     strings: [
-                        "Building <span class='text-yellow-300'>intelligent solutions</span> with AI",
-                        "Specializing in <span class='text-yellow-300'>NLP</span> and <span class='text-yellow-300'>LLM</span> applications",
-                        "Transforming <span class='text-yellow-300'>complex problems</span> into <span class='text-yellow-300'>elegant solutions</span>"
+                        "Designing and shipping <span class='text-cyan-300'>LLM &amp; RAG</span> systems for real products.",
+                        "Focus: <span class='text-cyan-300'>NLP</span>, retrieval, agents, and <span class='text-cyan-300'>production APIs</span>.",
+                        "From experiments to <span class='text-cyan-300'>deployed software</span>—reliable, observable, and scalable."
                     ],
                     typeSpeed: 40,
                     backSpeed: 20,
