@@ -257,6 +257,15 @@
             border-radius: 1rem;
         }
 
+        @media (min-width: 768px) {
+            .hero-spline-bg {
+                position: absolute;
+                inset: 0;
+                border-radius: 1rem;
+                overflow: hidden;
+            }
+        }
+
         .spline-loader {
             position: absolute;
             inset: 0;
@@ -1536,91 +1545,78 @@
         <div id="particles-js"></div>
         <div class="hero-content">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-            <div class="md:flex md:items-center md:justify-between md:gap-12 lg:gap-16">
-                    <div class="md:w-1/2 mb-14 md:mb-0" data-aos="fade-right" data-aos-delay="100">
-                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/20 bg-white/10 text-white/95 text-xs font-semibold tracking-wide mb-5 backdrop-blur-sm">
-                            <span class="h-1.5 w-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]" aria-hidden="true"></span>
-                            AI Engineer · LLMs, NLP &amp; production systems
-                        </div>
-                        <h1 class="text-3xl md:text-4xl lg:text-[2.75rem] font-extrabold leading-[1.15] mb-6 text-reveal">
-                            <span class="text-white">Amer</span> <span class="text-cyan-100 highlight-box">Alnajdawi</span>
-                    </h1>
-                        <div class="min-h-[5rem] md:min-h-[4rem]">
-                            <p class="text-base md:text-lg text-slate-300 leading-relaxed max-w-xl">
-                                <span id="typed-text"></span>
-                            </p>
-                        </div>
-                        <div class="flex flex-col sm:flex-row flex-wrap gap-3 mt-8">
-                            <a href="https://github.com/amernajdawi/Amernajdawi.github.io/raw/main/Amer_Alnajdawi_CV.pdf" download="Amer_Alnajdawi_CV.pdf" target="_blank" rel="noopener" type="application/pdf" class="bg-white text-slate-900 hover:bg-slate-100 font-semibold py-3 px-6 rounded-xl transition duration-300 text-center text-sm sm:text-base btn-pulse shadow-lg shadow-black/20 flex items-center justify-center gap-2">
-                                <span>Download CV</span>
-                                <i class="fas fa-file-pdf text-indigo-600" aria-hidden="true"></i>
-                            </a>
-                            <a href="#contact" class="bg-white/10 text-white border border-white/25 hover:bg-white/15 font-semibold py-3 px-6 rounded-xl transition duration-300 text-center text-sm sm:text-base flex items-center justify-center gap-2 backdrop-blur-sm">
-                                <span>Contact</span>
-                            <i class="fas fa-arrow-right text-cyan-300" aria-hidden="true"></i>
-                        </a>
-                            <a href="#projects" class="border border-white/35 text-white/95 hover:bg-white/10 font-semibold py-3 px-6 rounded-xl transition duration-300 text-center text-sm sm:text-base flex items-center justify-center gap-2">
-                                <span>Selected work</span>
-                            <i class="fas fa-layer-group text-white/70" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-                    <div class="md:w-1/2 flex justify-center md:justify-end" data-aos="fade-left" data-aos-delay="200">
-                        <!-- 3D Spline Scene (desktop) -->
-                        <div class="hidden md:block w-full">
-                            <div class="spline-container">
-                                <!-- Spotlight overlay -->
-                                <svg
-                                    class="spotlight-svg -top-40 left-0 lg:left-10 lg:-top-20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 3787 2842"
-                                    fill="none"
-                                >
-                                    <g filter="url(#filter)">
-                                        <ellipse
-                                            cx="1924.71"
-                                            cy="273.501"
-                                            rx="1924.71"
-                                            ry="273.501"
-                                            transform="matrix(-0.822377 -0.568943 -0.568943 0.822377 3631.88 2291.09)"
-                                            fill="white"
-                                            fill-opacity="0.21"
-                                        ></ellipse>
-                                    </g>
-                                    <defs>
-                                        <filter
-                                            id="filter"
-                                            x="0.860352"
-                                            y="0.838989"
-                                            width="3785.16"
-                                            height="2840.26"
-                                            filterUnits="userSpaceOnUse"
-                                            color-interpolation-filters="sRGB"
-                                        >
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-                                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
-                                            <feGaussianBlur stdDeviation="151" result="effect1_foregroundBlur"></feGaussianBlur>
-                                        </filter>
-                                    </defs>
-                                </svg>
-                                <!-- Loading spinner -->
-                                <div class="spline-loader" id="splineLoader">
-                                    <div class="spline-spinner"></div>
-                                </div>
-                                <!-- Spline 3D viewer -->
-                                <spline-viewer
-                                    url="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-                                    loading-anim-type="spinner-big-dark"
-                                ></spline-viewer>
+            <div class="md:flex md:items-center md:justify-between md:gap-8 lg:gap-12">
+                    <!-- Left: 3D Robot with text overlay (desktop) / Text only (mobile) -->
+                    <div class="md:w-3/5 mb-14 md:mb-0 relative" data-aos="fade-right" data-aos-delay="100">
+                        <!-- Spline 3D background (desktop only) -->
+                        <div class="hidden md:block absolute inset-0 rounded-2xl overflow-hidden" style="z-index: 0;">
+                            <svg
+                                class="spotlight-svg -top-40 left-0 lg:left-10 lg:-top-20"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 3787 2842"
+                                fill="none"
+                            >
+                                <g filter="url(#filter)">
+                                    <ellipse cx="1924.71" cy="273.501" rx="1924.71" ry="273.501"
+                                        transform="matrix(-0.822377 -0.568943 -0.568943 0.822377 3631.88 2291.09)"
+                                        fill="white" fill-opacity="0.21"></ellipse>
+                                </g>
+                                <defs>
+                                    <filter id="filter" x="0.860352" y="0.838989" width="3785.16" height="2840.26"
+                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                                        <feGaussianBlur stdDeviation="151" result="effect1_foregroundBlur"></feGaussianBlur>
+                                    </filter>
+                                </defs>
+                            </svg>
+                            <div class="spline-loader" id="splineLoader">
+                                <div class="spline-spinner"></div>
                             </div>
-                            <p class="mt-4 text-right text-sm text-slate-400 font-medium tracking-wide">Vienna, Austria</p>
+                            <spline-viewer
+                                url="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+                                loading-anim-type="spinner-big-dark"
+                                style="width:100%;height:100%;"
+                            ></spline-viewer>
                         </div>
-                        <!-- Photo fallback (mobile) -->
-                        <div class="md:hidden hero-photo-frame">
+                        <!-- Text content overlaid on robot -->
+                        <div class="relative z-10 md:min-h-[420px] lg:min-h-[460px] flex flex-col justify-center md:p-8 lg:p-10">
+                            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/20 bg-white/10 text-white/95 text-xs font-semibold tracking-wide mb-5 backdrop-blur-sm w-fit">
+                                <span class="h-1.5 w-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]" aria-hidden="true"></span>
+                                AI Engineer · LLMs, NLP &amp; production systems
+                            </div>
+                            <h1 class="text-3xl md:text-4xl lg:text-[2.75rem] font-extrabold leading-[1.15] mb-6 text-reveal">
+                                <span class="text-white">Amer</span> <span class="text-cyan-100 highlight-box">Alnajdawi</span>
+                            </h1>
+                            <div class="min-h-[5rem] md:min-h-[4rem]">
+                                <p class="text-base md:text-lg text-slate-300 leading-relaxed max-w-xl md:drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+                                    <span id="typed-text"></span>
+                                </p>
+                            </div>
+                            <div class="flex flex-col sm:flex-row flex-wrap gap-3 mt-8">
+                                <a href="https://github.com/amernajdawi/Amernajdawi.github.io/raw/main/Amer_Alnajdawi_CV.pdf" download="Amer_Alnajdawi_CV.pdf" target="_blank" rel="noopener" type="application/pdf" class="bg-white text-slate-900 hover:bg-slate-100 font-semibold py-3 px-6 rounded-xl transition duration-300 text-center text-sm sm:text-base btn-pulse shadow-lg shadow-black/20 flex items-center justify-center gap-2">
+                                    <span>Download CV</span>
+                                    <i class="fas fa-file-pdf text-indigo-600" aria-hidden="true"></i>
+                                </a>
+                                <a href="#contact" class="bg-white/10 text-white border border-white/25 hover:bg-white/15 font-semibold py-3 px-6 rounded-xl transition duration-300 text-center text-sm sm:text-base flex items-center justify-center gap-2 backdrop-blur-sm">
+                                    <span>Contact</span>
+                                    <i class="fas fa-arrow-right text-cyan-300" aria-hidden="true"></i>
+                                </a>
+                                <a href="#projects" class="border border-white/35 text-white/95 hover:bg-white/10 font-semibold py-3 px-6 rounded-xl transition duration-300 text-center text-sm sm:text-base flex items-center justify-center gap-2">
+                                    <span>Selected work</span>
+                                    <i class="fas fa-layer-group text-white/70" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Photo -->
+                    <div class="md:w-2/5 flex justify-center md:justify-end" data-aos="fade-left" data-aos-delay="200">
+                        <div class="hero-photo-frame">
                             <div class="hero-photo-inner">
                                 <img src="amer-768x732.jpg" alt="Amer Alnajdawi — AI engineer" class="w-full aspect-square object-cover object-[center_20%] block" width="768" height="732" loading="eager" fetchpriority="high">
                             </div>
-                            <p class="mt-4 text-center text-sm text-slate-400 font-medium tracking-wide">Vienna, Austria</p>
+                            <p class="mt-4 text-center md:text-right text-sm text-slate-400 font-medium tracking-wide">Vienna, Austria</p>
                         </div>
                     </div>
                 </div>
