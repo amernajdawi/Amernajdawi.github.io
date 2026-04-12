@@ -336,13 +336,20 @@
             border-radius: 1rem;
         }
 
-        spline-viewer #logo,
-        spline-viewer .logo,
-        spline-viewer [class*="logo"],
-        spline-viewer a[href*="spline"] {
-            display: none !important;
-            opacity: 0 !important;
-            pointer-events: none !important;
+        spline-viewer {
+            position: relative;
+        }
+
+        spline-viewer::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 200px;
+            height: 50px;
+            background: #030303;
+            z-index: 9999;
+            pointer-events: none;
         }
 
         @media (min-width: 768px) {
