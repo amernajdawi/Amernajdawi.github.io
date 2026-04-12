@@ -336,6 +336,15 @@
             border-radius: 1rem;
         }
 
+        spline-viewer #logo,
+        spline-viewer .logo,
+        spline-viewer [class*="logo"],
+        spline-viewer a[href*="spline"] {
+            display: none !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+
         @media (min-width: 768px) {
             .hero-spline-bg {
                 position: absolute;
@@ -1737,6 +1746,7 @@
                         <spline-viewer
                             url="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
                             loading-anim-type="spinner-big-dark"
+                            hint="false"
                             style="width: 100%; height: 100%; position: absolute; inset: 0;"
                         ></spline-viewer>
                     </div>
