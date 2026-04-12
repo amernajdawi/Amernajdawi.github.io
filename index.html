@@ -65,7 +65,8 @@
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
             scroll-behavior: smooth;
             line-height: 1.65;
-            color: #334155;
+            color: #cbd5e1;
+            background: #030303;
             -webkit-font-smoothing: antialiased;
         }
         
@@ -169,11 +170,11 @@
         }
         
         .nav-glass {
-            background: rgba(255, 255, 255, 0.88);
+            background: rgba(3, 3, 3, 0.75);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
-            border-bottom: 1px solid rgba(148, 163, 184, 0.18);
-            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: none;
         }
         
         .hero-photo-frame {
@@ -236,7 +237,7 @@
             height: 2px;
             bottom: 0;
             left: 0;
-            background-color: var(--primary);
+            background-color: #818cf8;
             transition: width 0.3s ease;
         }
         
@@ -254,8 +255,8 @@
         
         .contact-input:focus {
             outline: none;
-            box-shadow: 0 0 0 2px rgba(67, 56, 202, 0.35);
-            border-color: #a5b4fc;
+            box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.4);
+            border-color: rgba(99, 102, 241, 0.5);
         }
         
         .section-spacing {
@@ -1302,7 +1303,7 @@
     
     <!-- Updated timestamp: 2026-04-05 -->
 </head>
-<body class="bg-slate-50 text-slate-700">
+<body class="bg-[#030303] text-slate-300">
     <!-- Mobile Content (shown on mobile devices) -->
     <div class="mobile-content">
         <div class="mobile-card">
@@ -1579,23 +1580,23 @@
             <div class="flex justify-between h-[4.25rem] items-center">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
-                        <span class="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">Amer Alnajdawi</span>
-                        <span class="hidden sm:inline text-xs font-semibold uppercase tracking-widest text-indigo-600/90">AI Engineer</span>
+                        <span class="text-lg sm:text-xl font-bold text-white tracking-tight">Amer Alnajdawi</span>
+                        <span class="hidden sm:inline text-xs font-semibold uppercase tracking-widest text-indigo-400">AI Engineer</span>
                     </div>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home" class="nav-link text-slate-700 hover:text-indigo-600 px-3 py-2 text-sm font-semibold">Home</a>
-                        <a href="#about" class="nav-link text-slate-700 hover:text-indigo-600 px-3 py-2 text-sm font-semibold">About</a>
-                        <a href="#experience" class="nav-link text-slate-700 hover:text-indigo-600 px-3 py-2 text-sm font-semibold">Experience</a>
-                        <a href="#education" class="nav-link text-slate-700 hover:text-indigo-600 px-3 py-2 text-sm font-semibold">Education</a>
-                        <a href="#projects" class="nav-link text-slate-700 hover:text-indigo-600 px-3 py-2 text-sm font-semibold">Projects</a>
-                        <a href="#skills" class="nav-link text-slate-700 hover:text-indigo-600 px-3 py-2 text-sm font-semibold">Skills</a>
-                        <a href="#contact" class="nav-link text-slate-700 hover:text-indigo-600 px-3 py-2 text-sm font-semibold">Contact</a>
+                        <a href="#home" class="nav-link text-slate-300 hover:text-indigo-400 px-3 py-2 text-sm font-semibold">Home</a>
+                        <a href="#about" class="nav-link text-slate-300 hover:text-indigo-400 px-3 py-2 text-sm font-semibold">About</a>
+                        <a href="#experience" class="nav-link text-slate-300 hover:text-indigo-400 px-3 py-2 text-sm font-semibold">Experience</a>
+                        <a href="#education" class="nav-link text-slate-300 hover:text-indigo-400 px-3 py-2 text-sm font-semibold">Education</a>
+                        <a href="#projects" class="nav-link text-slate-300 hover:text-indigo-400 px-3 py-2 text-sm font-semibold">Projects</a>
+                        <a href="#skills" class="nav-link text-slate-300 hover:text-indigo-400 px-3 py-2 text-sm font-semibold">Skills</a>
+                        <a href="#contact" class="nav-link text-slate-300 hover:text-indigo-400 px-3 py-2 text-sm font-semibold">Contact</a>
                     </div>
                 </div>
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-slate-500 hover:text-indigo-600 focus:outline-none" aria-expanded="false" aria-controls="mobile-menu">
+                    <button id="mobile-menu-button" class="text-slate-400 hover:text-indigo-400 focus:outline-none" aria-expanded="false" aria-controls="mobile-menu">
                         <i class="fas fa-bars text-2xl" id="menu-open-icon" aria-hidden="true"></i>
                         <i class="fas fa-times text-2xl hidden" id="menu-close-icon" aria-hidden="true"></i>
                         <span class="sr-only">Toggle navigation menu</span>
@@ -1605,15 +1606,15 @@
         </div>
         
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-lg transition-all duration-300 ease-in-out" role="menu" aria-labelledby="mobile-menu-button">
+        <div id="mobile-menu" class="hidden md:hidden bg-[#030303]/95 backdrop-blur-md border-b border-white/10 shadow-lg transition-all duration-300 ease-in-out" role="menu" aria-labelledby="mobile-menu-button">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="block px-3 py-2 text-base font-semibold text-slate-800 hover:text-indigo-600 rounded-lg hover:bg-slate-50" role="menuitem">Home</a>
-                <a href="#about" class="block px-3 py-2 text-base font-semibold text-slate-800 hover:text-indigo-600 rounded-lg hover:bg-slate-50" role="menuitem">About</a>
-                <a href="#experience" class="block px-3 py-2 text-base font-semibold text-slate-800 hover:text-indigo-600 rounded-lg hover:bg-slate-50" role="menuitem">Experience</a>
-                <a href="#education" class="block px-3 py-2 text-base font-semibold text-slate-800 hover:text-indigo-600 rounded-lg hover:bg-slate-50" role="menuitem">Education</a>
-                <a href="#projects" class="block px-3 py-2 text-base font-semibold text-slate-800 hover:text-indigo-600 rounded-lg hover:bg-slate-50" role="menuitem">Projects</a>
-                <a href="#skills" class="block px-3 py-2 text-base font-semibold text-slate-800 hover:text-indigo-600 rounded-lg hover:bg-slate-50" role="menuitem">Skills</a>
-                <a href="#contact" class="block px-3 py-2 text-base font-semibold text-slate-800 hover:text-indigo-600 rounded-lg hover:bg-slate-50" role="menuitem">Contact</a>
+                <a href="#home" class="block px-3 py-2 text-base font-semibold text-slate-200 hover:text-indigo-400 rounded-lg hover:bg-white/5" role="menuitem">Home</a>
+                <a href="#about" class="block px-3 py-2 text-base font-semibold text-slate-200 hover:text-indigo-400 rounded-lg hover:bg-white/5" role="menuitem">About</a>
+                <a href="#experience" class="block px-3 py-2 text-base font-semibold text-slate-200 hover:text-indigo-400 rounded-lg hover:bg-white/5" role="menuitem">Experience</a>
+                <a href="#education" class="block px-3 py-2 text-base font-semibold text-slate-200 hover:text-indigo-400 rounded-lg hover:bg-white/5" role="menuitem">Education</a>
+                <a href="#projects" class="block px-3 py-2 text-base font-semibold text-slate-200 hover:text-indigo-400 rounded-lg hover:bg-white/5" role="menuitem">Projects</a>
+                <a href="#skills" class="block px-3 py-2 text-base font-semibold text-slate-200 hover:text-indigo-400 rounded-lg hover:bg-white/5" role="menuitem">Skills</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-semibold text-slate-200 hover:text-indigo-400 rounded-lg hover:bg-white/5" role="menuitem">Contact</a>
             </div>
         </div>
     </nav>
@@ -1702,7 +1703,7 @@
     </section>
 
     <!-- About Me Section -->
-    <section id="about" class="section-spacing bg-slate-50 border-t border-slate-200/60">
+    <section id="about" class="section-spacing bg-[#030303] border-t border-white/[0.06]">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div class="md:flex items-center">
                 <div class="md:w-2/5 mb-10 md:mb-0" data-aos="fade-right">
@@ -1741,51 +1742,51 @@
                     </div>
                 </div>
                 <div class="md:w-3/5 md:pl-16" data-aos="fade-left" data-aos-delay="200">
-                    <div class="inline-block px-4 py-1 rounded-full border border-indigo-200/80 bg-white text-indigo-700 text-sm font-semibold mb-4 shadow-sm">About</div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                    <div class="inline-block px-4 py-1 rounded-full border border-white/[0.08] bg-white/[0.03] text-indigo-400 text-sm font-semibold mb-4">About</div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
                         <span class="relative">
                             <span class="relative z-10">Building reliable</span>
-                            <span class="absolute bottom-1 left-0 w-full h-3 bg-indigo-100/90 -z-10"></span>
+                            <span class="absolute bottom-1 left-0 w-full h-3 bg-indigo-500/20 -z-10"></span>
                         </span>
-                        <span class="text-indigo-600 ml-2">AI products</span>
+                        <span class="text-indigo-400 ml-2">AI products</span>
                     </h2>
-                    <p class="text-slate-600 mb-6 text-lg leading-relaxed">
+                    <p class="text-slate-400 mb-6 text-lg leading-relaxed">
                         A passionate and results-driven Artificial Intelligence professional currently pursuing a Master's degree in AI, with a specialization in Natural Language Processing. Possessing a strong background in developing AI-powered solutions, including LLM and RAG-based applications, for real-world challenges.
                     </p>
-                    <p class="text-slate-600 mb-8 text-lg leading-relaxed">
+                    <p class="text-slate-400 mb-8 text-lg leading-relaxed">
                         Actively involved in problem-solving competitions, demonstrating a commitment to continuous learning and innovation in AI. Eager to leverage expertise in AI and NLP to contribute to dynamic projects and drive technological advancements.
                     </p>
                     <div class="grid grid-cols-2 gap-x-6 gap-y-4 mb-8">
-                        <div class="flex items-center rounded-xl bg-white/80 border border-slate-200/80 px-3 py-2.5 shadow-sm">
-                            <div class="w-10 h-10 bg-indigo-50 rounded-lg flex items-center justify-center mr-3 shrink-0">
-                                <i class="fas fa-brain text-indigo-600"></i>
+                        <div class="flex items-center rounded-xl bg-white/[0.05] border border-white/[0.08] px-3 py-2.5">
+                            <div class="w-10 h-10 bg-indigo-500/10 rounded-lg flex items-center justify-center mr-3 shrink-0">
+                                <i class="fas fa-brain text-indigo-400"></i>
                             </div>
-                            <span class="text-slate-800 font-semibold text-sm">LLM &amp; RAG systems</span>
+                            <span class="text-white/80 font-semibold text-sm">LLM &amp; RAG systems</span>
                         </div>
-                        <div class="flex items-center rounded-xl bg-white/80 border border-slate-200/80 px-3 py-2.5 shadow-sm">
-                            <div class="w-10 h-10 bg-indigo-50 rounded-lg flex items-center justify-center mr-3 shrink-0">
-                                <i class="fas fa-comments text-indigo-600"></i>
+                        <div class="flex items-center rounded-xl bg-white/[0.05] border border-white/[0.08] px-3 py-2.5">
+                            <div class="w-10 h-10 bg-indigo-500/10 rounded-lg flex items-center justify-center mr-3 shrink-0">
+                                <i class="fas fa-comments text-indigo-400"></i>
                             </div>
-                            <span class="text-slate-800 font-semibold text-sm">NLP</span>
+                            <span class="text-white/80 font-semibold text-sm">NLP</span>
                         </div>
-                        <div class="flex items-center rounded-xl bg-white/80 border border-slate-200/80 px-3 py-2.5 shadow-sm">
-                            <div class="w-10 h-10 bg-indigo-50 rounded-lg flex items-center justify-center mr-3 shrink-0">
-                                <i class="fas fa-code text-indigo-600"></i>
+                        <div class="flex items-center rounded-xl bg-white/[0.05] border border-white/[0.08] px-3 py-2.5">
+                            <div class="w-10 h-10 bg-indigo-500/10 rounded-lg flex items-center justify-center mr-3 shrink-0">
+                                <i class="fas fa-code text-indigo-400"></i>
                             </div>
-                            <span class="text-slate-800 font-semibold text-sm">Production code</span>
+                            <span class="text-white/80 font-semibold text-sm">Production code</span>
                         </div>
-                        <div class="flex items-center rounded-xl bg-white/80 border border-slate-200/80 px-3 py-2.5 shadow-sm">
-                            <div class="w-10 h-10 bg-indigo-50 rounded-lg flex items-center justify-center mr-3 shrink-0">
-                                <i class="fas fa-graduation-cap text-indigo-600"></i>
+                        <div class="flex items-center rounded-xl bg-white/[0.05] border border-white/[0.08] px-3 py-2.5">
+                            <div class="w-10 h-10 bg-indigo-500/10 rounded-lg flex items-center justify-center mr-3 shrink-0">
+                                <i class="fas fa-graduation-cap text-indigo-400"></i>
                             </div>
-                            <span class="text-slate-800 font-semibold text-sm">Research mindset</span>
+                            <span class="text-white/80 font-semibold text-sm">Research mindset</span>
                         </div>
                     </div>
                     <div class="flex flex-wrap gap-3">
-                        <a href="https://linkedin.com/in/amer-alnajdawi" target="_blank" rel="noopener noreferrer" class="bg-[#0A66C2] hover:bg-[#095195] text-white font-semibold py-3 px-6 rounded-xl transition duration-300 inline-flex items-center gap-2 shadow-md shadow-slate-300/50">
+                        <a href="https://linkedin.com/in/amer-alnajdawi" target="_blank" rel="noopener noreferrer" class="bg-[#0A66C2] hover:bg-[#095195] text-white font-semibold py-3 px-6 rounded-xl transition duration-300 inline-flex items-center gap-2 shadow-md shadow-black/30">
                             <i class="fab fa-linkedin-in"></i> LinkedIn
                         </a>
-                        <a href="https://github.com/amernajdawi" target="_blank" rel="noopener noreferrer" class="bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3 px-6 rounded-xl transition duration-300 inline-flex items-center gap-2 shadow-md shadow-slate-300/50">
+                        <a href="https://github.com/amernajdawi" target="_blank" rel="noopener noreferrer" class="bg-white/[0.08] hover:bg-white/[0.12] text-white border border-white/[0.1] font-semibold py-3 px-6 rounded-xl transition duration-300 inline-flex items-center gap-2">
                             <i class="fab fa-github"></i> GitHub
                         </a>
                     </div>
@@ -1795,18 +1796,18 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="section-spacing bg-white border-t border-slate-200/60">
+    <section id="experience" class="section-spacing bg-[#030303] border-t border-white/[0.06]">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div class="text-center mb-20" data-aos="fade-up">
-                <div class="inline-block px-4 py-1 rounded-full border border-indigo-200/80 bg-white text-indigo-700 text-sm font-semibold mb-4 shadow-sm">Experience</div>
-                <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">
+                <div class="inline-block px-4 py-1 rounded-full border border-white/[0.08] bg-white/[0.03] text-indigo-400 text-sm font-semibold mb-4">Experience</div>
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">
                     <span class="relative">
                         <span class="relative z-10">Professional</span>
-                        <span class="absolute bottom-1 left-0 w-full h-3 bg-indigo-100 -z-10"></span>
+                        <span class="absolute bottom-1 left-0 w-full h-3 bg-indigo-500/20 -z-10"></span>
                     </span>
-                    <span class="text-indigo-600 ml-2">Experience</span>
+                    <span class="text-indigo-400 ml-2">Experience</span>
                 </h2>
-                <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
+                <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
                     Shipping AI-powered products end to end—from research and model integration to APIs, data, and deployment.
                 </p>
                 <div class="flex justify-center gap-1.5 mb-12" aria-hidden="true">
@@ -1817,7 +1818,7 @@
             </div>
             
             <div class="relative max-w-4xl mx-auto">
-                <div class="absolute left-[22px] md:left-1/2 md:-translate-x-px top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-300 via-cyan-300 to-violet-300 rounded-full hidden md:block"></div>
+                <div class="absolute left-[22px] md:left-1/2 md:-translate-x-px top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-500/50 via-cyan-500/50 to-violet-500/50 rounded-full hidden md:block"></div>
 
                 <div class="space-y-10 md:space-y-16">
                     <div class="relative md:flex md:items-start md:gap-10 group" data-aos="fade-up" data-aos-delay="80">
@@ -1825,14 +1826,14 @@
                             <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-indigo-600 bg-indigo-50 border border-indigo-200/70 rounded-full px-3 py-1 mb-3">
                                 <span class="h-1.5 w-1.5 rounded-full bg-indigo-500"></span> Current
                             </span>
-                            <h3 class="text-xl font-bold text-slate-900 mb-1">AI Software Developer</h3>
+                            <h3 class="text-xl font-bold text-white mb-1">AI Software Developer</h3>
                             <p class="text-indigo-600 font-semibold text-sm">Timeless Soft GmbH</p>
                             <p class="text-slate-500 text-sm mt-0.5">Jan 2025 – Present · Vienna, Austria</p>
                         </div>
-                        <div class="hidden md:block absolute left-1/2 -translate-x-1/2 top-2 w-4 h-4 rounded-full bg-white border-[3px] border-indigo-500 shadow-md shadow-indigo-200/60 z-10 group-hover:scale-125 transition-transform duration-300"></div>
+                        <div class="hidden md:block absolute left-1/2 -translate-x-1/2 top-2 w-4 h-4 rounded-full bg-[#030303] border-[3px] border-indigo-500 shadow-md shadow-indigo-200/60 z-10 group-hover:scale-125 transition-transform duration-300"></div>
                         <div class="md:w-1/2 md:pl-10">
-                            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-indigo-200/60 transition-all duration-300">
-                                <ul class="space-y-3 text-slate-600 text-sm leading-relaxed">
+                            <div class="bg-white/[0.04] border border-white/[0.08] rounded-2xl p-6 hover:border-indigo-200/60 transition-all duration-300">
+                                <ul class="space-y-3 text-slate-400 text-sm leading-relaxed">
                                     <li class="flex items-start gap-2.5"><i class="fas fa-bolt text-indigo-500 mt-0.5 shrink-0" aria-hidden="true"></i><span>Developed the "e-novations" project — backend algorithm for optimal EV charging tariffs across Austrian providers by location.</span></li>
                                     <li class="flex items-start gap-2.5"><i class="fas fa-bolt text-indigo-500 mt-0.5 shrink-0" aria-hidden="true"></i><span>Built an AI application using LLM to identify potential customers for the company.</span></li>
                                 </ul>
@@ -1845,14 +1846,14 @@
                             <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-cyan-700 bg-cyan-50 border border-cyan-200/70 rounded-full px-3 py-1 mb-3">
                                 <span class="h-1.5 w-1.5 rounded-full bg-cyan-500"></span> Leadership
                             </span>
-                            <h3 class="text-xl font-bold text-slate-900 mb-1">CTO &amp; Lead Developer</h3>
+                            <h3 class="text-xl font-bold text-white mb-1">CTO &amp; Lead Developer</h3>
                             <p class="text-indigo-600 font-semibold text-sm">AIKA Startup Company</p>
                             <p class="text-slate-500 text-sm mt-0.5">Jan 2025 – Present · Austria</p>
                         </div>
-                        <div class="hidden md:block absolute left-1/2 -translate-x-1/2 top-2 w-4 h-4 rounded-full bg-white border-[3px] border-cyan-500 shadow-md shadow-cyan-200/60 z-10 group-hover:scale-125 transition-transform duration-300"></div>
+                        <div class="hidden md:block absolute left-1/2 -translate-x-1/2 top-2 w-4 h-4 rounded-full bg-[#030303] border-[3px] border-cyan-500 shadow-md shadow-cyan-200/60 z-10 group-hover:scale-125 transition-transform duration-300"></div>
                         <div class="md:w-1/2 md:pl-10">
-                            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-cyan-200/60 transition-all duration-300">
-                                <ul class="space-y-3 text-slate-600 text-sm leading-relaxed">
+                            <div class="bg-white/[0.04] border border-white/[0.08] rounded-2xl p-6 hover:border-cyan-200/60 transition-all duration-300">
+                                <ul class="space-y-3 text-slate-400 text-sm leading-relaxed">
                                     <li class="flex items-start gap-2.5"><i class="fas fa-bolt text-cyan-500 mt-0.5 shrink-0" aria-hidden="true"></i><span>Drove development of a technology solution for economic transformation and sustainability.</span></li>
                                     <li class="flex items-start gap-2.5"><i class="fas fa-bolt text-cyan-500 mt-0.5 shrink-0" aria-hidden="true"></i><span>Designed and built the LLM-powered application with RAG for semantic search and knowledge accessibility.</span></li>
                                     <li class="flex items-start gap-2.5"><i class="fas fa-bolt text-cyan-500 mt-0.5 shrink-0" aria-hidden="true"></i><span>TypeScript frontend + Python backend; integrated vector search for reporting and expert knowledge management.</span></li>
@@ -1866,14 +1867,14 @@
                             <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-emerald-700 bg-emerald-50 border border-emerald-200/70 rounded-full px-3 py-1 mb-3">
                                 <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Internship
                             </span>
-                            <h3 class="text-xl font-bold text-slate-900 mb-1">AI Software Developer</h3>
+                            <h3 class="text-xl font-bold text-white mb-1">AI Software Developer</h3>
                             <p class="text-indigo-600 font-semibold text-sm">Treetop Medical GmbH</p>
                             <p class="text-slate-500 text-sm mt-0.5">Jul – Sep 2024 · Vienna, Austria</p>
                         </div>
-                        <div class="hidden md:block absolute left-1/2 -translate-x-1/2 top-2 w-4 h-4 rounded-full bg-white border-[3px] border-emerald-500 shadow-md shadow-emerald-200/60 z-10 group-hover:scale-125 transition-transform duration-300"></div>
+                        <div class="hidden md:block absolute left-1/2 -translate-x-1/2 top-2 w-4 h-4 rounded-full bg-[#030303] border-[3px] border-emerald-500 shadow-md shadow-emerald-200/60 z-10 group-hover:scale-125 transition-transform duration-300"></div>
                         <div class="md:w-1/2 md:pl-10">
-                            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-emerald-200/60 transition-all duration-300">
-                                <ul class="space-y-3 text-slate-600 text-sm leading-relaxed">
+                            <div class="bg-white/[0.04] border border-white/[0.08] rounded-2xl p-6 hover:border-emerald-200/60 transition-all duration-300">
+                                <ul class="space-y-3 text-slate-400 text-sm leading-relaxed">
                                     <li class="flex items-start gap-2.5"><i class="fas fa-bolt text-emerald-500 mt-0.5 shrink-0" aria-hidden="true"></i><span>Built a Streamlit application for project visualization.</span></li>
                                     <li class="flex items-start gap-2.5"><i class="fas fa-bolt text-emerald-500 mt-0.5 shrink-0" aria-hidden="true"></i><span>Researched and implemented LLM-based data extraction solutions.</span></li>
                                     <li class="flex items-start gap-2.5"><i class="fas fa-bolt text-emerald-500 mt-0.5 shrink-0" aria-hidden="true"></i><span>Trained and fine-tuned multi-class classifiers using HuggingFace Transformers.</span></li>
@@ -1888,14 +1889,14 @@
                             <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-slate-600 bg-slate-100 border border-slate-200/70 rounded-full px-3 py-1 mb-3">
                                 <span class="h-1.5 w-1.5 rounded-full bg-slate-400"></span> Full-time
                             </span>
-                            <h3 class="text-xl font-bold text-slate-900 mb-1">Technical Support</h3>
+                            <h3 class="text-xl font-bold text-white mb-1">Technical Support</h3>
                             <p class="text-indigo-600 font-semibold text-sm">Manaseer Group</p>
                             <p class="text-slate-500 text-sm mt-0.5">Aug 2022 – Sep 2023 · Amman, Jordan</p>
                         </div>
-                        <div class="hidden md:block absolute left-1/2 -translate-x-1/2 top-2 w-4 h-4 rounded-full bg-white border-[3px] border-slate-400 shadow-md shadow-slate-200/60 z-10 group-hover:scale-125 transition-transform duration-300"></div>
+                        <div class="hidden md:block absolute left-1/2 -translate-x-1/2 top-2 w-4 h-4 rounded-full bg-[#030303] border-[3px] border-slate-400 shadow-md shadow-slate-200/60 z-10 group-hover:scale-125 transition-transform duration-300"></div>
                         <div class="md:w-1/2 md:pl-10">
-                            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-slate-300/80 transition-all duration-300">
-                                <ul class="space-y-3 text-slate-600 text-sm leading-relaxed">
+                            <div class="bg-white/[0.04] border border-white/[0.08] rounded-2xl p-6 hover:border-slate-300/80 transition-all duration-300">
+                                <ul class="space-y-3 text-slate-400 text-sm leading-relaxed">
                                     <li class="flex items-start gap-2.5"><i class="fas fa-bolt text-slate-400 mt-0.5 shrink-0" aria-hidden="true"></i><span>Software and hardware support including Microsoft Office troubleshooting.</span></li>
                                     <li class="flex items-start gap-2.5"><i class="fas fa-bolt text-slate-400 mt-0.5 shrink-0" aria-hidden="true"></i><span>Hardware diagnostics, component replacement, and printer maintenance.</span></li>
                                 </ul>
@@ -1908,58 +1909,58 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="section-spacing bg-slate-50 border-t border-slate-200/60">
+    <section id="education" class="section-spacing bg-[#030303] border-t border-white/[0.06]">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div class="text-center mb-16" data-aos="fade-up">
-                <div class="inline-block px-4 py-1 rounded-full border border-indigo-200/80 bg-white text-indigo-700 text-sm font-semibold mb-4 shadow-sm">Education</div>
-                <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">
+                <div class="inline-block px-4 py-1 rounded-full border border-white/[0.08] bg-white/[0.03] text-indigo-400 text-sm font-semibold mb-4">Education</div>
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">
                     <span class="relative">
                         <span class="relative z-10">Academic</span>
-                        <span class="absolute bottom-1 left-0 w-full h-3 bg-indigo-100 -z-10"></span>
+                        <span class="absolute bottom-1 left-0 w-full h-3 bg-indigo-500/20 -z-10"></span>
                     </span>
-                    <span class="text-indigo-600 ml-2">Background</span>
+                    <span class="text-indigo-400 ml-2">Background</span>
                 </h2>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <div class="bg-white border border-slate-200/90 rounded-2xl shadow-sm hover:shadow-lg hover:border-indigo-200/60 transition-all duration-300 overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white/[0.04] border border-white/[0.08] rounded-2xl hover:border-indigo-500/30 transition-all duration-300 overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
                     <div class="h-2 bg-gradient-to-r from-indigo-500 via-cyan-500 to-violet-500"></div>
                     <div class="p-8">
                         <div class="flex items-start gap-4 mb-5">
-                            <div class="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center shrink-0 border border-indigo-100/80 group-hover:bg-indigo-100 transition-colors duration-300">
+                            <div class="w-14 h-14 bg-indigo-500/10 rounded-2xl flex items-center justify-center shrink-0 border border-indigo-100/80 group-hover:bg-indigo-100 transition-colors duration-300">
                                 <i class="fas fa-graduation-cap text-xl text-indigo-600"></i>
                             </div>
                             <div>
-                                <h3 class="text-lg font-bold text-slate-900 leading-snug">Master Degree in Artificial Intelligence</h3>
-                                <p class="text-indigo-600 font-semibold text-sm mt-1">Johannes Kepler University Linz, Austria</p>
+                                <h3 class="text-lg font-bold text-white leading-snug">Master Degree in Artificial Intelligence</h3>
+                                <p class="text-indigo-400 font-semibold text-sm mt-1">Johannes Kepler University Linz, Austria</p>
                             </div>
                         </div>
                         <div class="flex flex-wrap items-center gap-2 mt-4">
-                            <span class="text-xs font-semibold uppercase tracking-wider text-slate-500 bg-slate-100 border border-slate-200/70 rounded-full px-3 py-1">2025</span>
-                            <span class="text-xs font-semibold text-indigo-700 bg-indigo-50 border border-indigo-100 rounded-full px-3 py-1">NLP Specialization</span>
-                            <span class="text-xs font-semibold text-slate-600 bg-slate-50 border border-slate-200/70 rounded-full px-3 py-1">AI Research</span>
-                            <span class="text-xs font-semibold text-slate-600 bg-slate-50 border border-slate-200/70 rounded-full px-3 py-1">Machine Learning</span>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-slate-400 bg-white/[0.06] border border-white/[0.08] rounded-full px-3 py-1">2025</span>
+                            <span class="text-xs font-semibold text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 rounded-full px-3 py-1">NLP Specialization</span>
+                            <span class="text-xs font-semibold text-slate-400 bg-white/[0.06] border border-white/[0.08] rounded-full px-3 py-1">AI Research</span>
+                            <span class="text-xs font-semibold text-slate-400 bg-white/[0.06] border border-white/[0.08] rounded-full px-3 py-1">Machine Learning</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="bg-white border border-slate-200/90 rounded-2xl shadow-sm hover:shadow-lg hover:border-indigo-200/60 transition-all duration-300 overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white/[0.04] border border-white/[0.08] rounded-2xl hover:border-indigo-500/30 transition-all duration-300 overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
                     <div class="h-2 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500"></div>
                     <div class="p-8">
                         <div class="flex items-start gap-4 mb-5">
-                            <div class="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center shrink-0 border border-emerald-100/80 group-hover:bg-emerald-100 transition-colors duration-300">
+                            <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center shrink-0 border border-emerald-100/80 group-hover:bg-emerald-100 transition-colors duration-300">
                                 <i class="fas fa-laptop-code text-xl text-emerald-600"></i>
                             </div>
                             <div>
-                                <h3 class="text-lg font-bold text-slate-900 leading-snug">Bachelor in Computer Science</h3>
-                                <p class="text-indigo-600 font-semibold text-sm mt-1">AlBalqa Applied University, Amman, Jordan</p>
+                                <h3 class="text-lg font-bold text-white leading-snug">Bachelor in Computer Science</h3>
+                                <p class="text-indigo-400 font-semibold text-sm mt-1">AlBalqa Applied University, Amman, Jordan</p>
                             </div>
                         </div>
                         <div class="flex flex-wrap items-center gap-2 mt-4">
-                            <span class="text-xs font-semibold uppercase tracking-wider text-slate-500 bg-slate-100 border border-slate-200/70 rounded-full px-3 py-1">2022</span>
-                            <span class="text-xs font-semibold text-slate-600 bg-slate-50 border border-slate-200/70 rounded-full px-3 py-1">Software Engineering</span>
-                            <span class="text-xs font-semibold text-slate-600 bg-slate-50 border border-slate-200/70 rounded-full px-3 py-1">Data Structures</span>
-                            <span class="text-xs font-semibold text-slate-600 bg-slate-50 border border-slate-200/70 rounded-full px-3 py-1">Algorithms</span>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-slate-400 bg-white/[0.06] border border-white/[0.08] rounded-full px-3 py-1">2022</span>
+                            <span class="text-xs font-semibold text-slate-400 bg-white/[0.06] border border-white/[0.08] rounded-full px-3 py-1">Software Engineering</span>
+                            <span class="text-xs font-semibold text-slate-400 bg-white/[0.06] border border-white/[0.08] rounded-full px-3 py-1">Data Structures</span>
+                            <span class="text-xs font-semibold text-slate-400 bg-white/[0.06] border border-white/[0.08] rounded-full px-3 py-1">Algorithms</span>
                         </div>
                     </div>
                 </div>
@@ -1968,41 +1969,41 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section-spacing bg-white border-t border-slate-200/60">
+    <section id="projects" class="section-spacing bg-[#030303] border-t border-white/[0.06]">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div class="text-center mb-20" data-aos="fade-up">
-                <div class="inline-block px-4 py-1 rounded-full border border-indigo-200/80 bg-white text-indigo-700 text-sm font-semibold mb-4 shadow-sm">Projects</div>
-                <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">
+                <div class="inline-block px-4 py-1 rounded-full border border-white/[0.08] bg-white/[0.03] text-indigo-400 text-sm font-semibold mb-4">Projects</div>
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">
                     <span class="relative">
                         <span class="relative z-10">Selected</span>
-                        <span class="absolute bottom-1 left-0 w-full h-3 bg-indigo-100 -z-10"></span>
+                        <span class="absolute bottom-1 left-0 w-full h-3 bg-indigo-500/20 -z-10"></span>
                     </span>
-                    <span class="text-indigo-600 ml-2">Work</span>
+                    <span class="text-indigo-400 ml-2">Work</span>
                 </h2>
-                <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
                     End-to-end projects in AI, NLP, and full-stack development.
                 </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
                 <!-- Project 1: AIKA Project -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200/80 transition-all duration-300 hover:shadow-xl hover:border-indigo-200/60 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
-                    <div class="h-40 bg-gradient-to-br from-indigo-50 via-white to-indigo-100/60 flex items-center justify-center overflow-hidden">
+                <div class="bg-white/[0.04] rounded-2xl overflow-hidden border border-white/[0.08] transition-all duration-300 hover:shadow-xl hover:border-indigo-200/60 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-40 bg-gradient-to-br from-indigo-500/10 via-transparent to-indigo-500/5 flex items-center justify-center overflow-hidden">
                         <i class="fas fa-project-diagram text-4xl text-indigo-500/70"></i>
                     </div>
                     <div class="p-6">
                         <div class="flex items-center gap-2 mb-3">
-                            <h3 class="text-xl font-bold text-slate-900">AIKA Project</h3>
+                            <h3 class="text-xl font-bold text-white">AIKA Project</h3>
                             <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-700 bg-emerald-50 border border-emerald-200/70 rounded-full px-2 py-0.5">Live</span>
                         </div>
-                        <p class="text-slate-600 mb-5 text-sm leading-relaxed">
+                        <p class="text-slate-400 mb-5 text-sm leading-relaxed">
                             LLM-powered application with RAG for semantic search, vector search database for expert knowledge management, and economic sustainability tooling.
                         </p>
                         <div class="flex flex-wrap gap-1.5 mb-5">
-                            <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-indigo-100">LLM</span>
-                            <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-indigo-100">RAG</span>
-                            <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-indigo-100">TypeScript</span>
-                            <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-indigo-100">Python</span>
+                            <span class="bg-indigo-500/10 text-indigo-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-indigo-500/20">LLM</span>
+                            <span class="bg-indigo-500/10 text-indigo-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-indigo-500/20">RAG</span>
+                            <span class="bg-indigo-500/10 text-indigo-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-indigo-500/20">TypeScript</span>
+                            <span class="bg-indigo-500/10 text-indigo-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-indigo-500/20">Python</span>
                         </div>
                         <a href="https://www.aika.at" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 hover:text-indigo-800 transition-colors">
                             <span>Visit Website</span>
@@ -2012,25 +2013,25 @@
                 </div>
                 
                 <!-- Project 2: Progrezz -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200/80 transition-all duration-300 hover:shadow-xl hover:border-sky-200/60 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
-                    <div class="h-40 bg-gradient-to-br from-sky-50 via-white to-sky-100/60 flex items-center justify-center overflow-hidden">
+                <div class="bg-white/[0.04] rounded-2xl overflow-hidden border border-white/[0.08] transition-all duration-300 hover:shadow-xl hover:border-sky-200/60 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-40 bg-gradient-to-br from-sky-500/10 via-transparent to-sky-500/5 flex items-center justify-center overflow-hidden">
                         <i class="fas fa-graduation-cap text-4xl text-sky-500/70"></i>
                     </div>
                     <div class="p-6">
                         <div class="flex items-center gap-2 mb-3">
-                            <h3 class="text-xl font-bold text-slate-900">Progrezz</h3>
+                            <h3 class="text-xl font-bold text-white">Progrezz</h3>
                             <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-700 bg-emerald-50 border border-emerald-200/70 rounded-full px-2 py-0.5">Live</span>
                         </div>
-                        <p class="text-slate-600 mb-5 text-sm leading-relaxed">
+                        <p class="text-slate-400 mb-5 text-sm leading-relaxed">
                             AI-powered learning platform that turns PDFs and web articles into interactive quizzes, flashcards, and essay Q&A. Features a feedback loop that re-targets weak topics, a Student Hub for organizing materials, and visual mind maps.
                         </p>
                         <div class="flex flex-wrap gap-1.5 mb-5">
-                            <span class="bg-sky-50 text-sky-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-sky-100">Next.js</span>
-                            <span class="bg-sky-50 text-sky-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-sky-100">FastAPI</span>
-                            <span class="bg-sky-50 text-sky-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-sky-100">TypeScript</span>
-                            <span class="bg-sky-50 text-sky-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-sky-100">Python</span>
-                            <span class="bg-sky-50 text-sky-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-sky-100">Groq LLM</span>
-                            <span class="bg-sky-50 text-sky-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-sky-100">Stripe</span>
+                            <span class="bg-sky-500/10 text-sky-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-sky-500/20">Next.js</span>
+                            <span class="bg-sky-500/10 text-sky-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-sky-500/20">FastAPI</span>
+                            <span class="bg-sky-500/10 text-sky-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-sky-500/20">TypeScript</span>
+                            <span class="bg-sky-500/10 text-sky-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-sky-500/20">Python</span>
+                            <span class="bg-sky-500/10 text-sky-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-sky-500/20">Groq LLM</span>
+                            <span class="bg-sky-500/10 text-sky-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-sky-500/20">Stripe</span>
                         </div>
                         <a href="https://www.progrezz.at" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 hover:text-sky-800 transition-colors">
                             <span>Visit Website</span>
@@ -2040,93 +2041,93 @@
                 </div>
                 
                 <!-- Project 3: Normo -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200/80 transition-all duration-300 hover:shadow-xl hover:border-teal-200/60 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
-                    <div class="h-40 bg-gradient-to-br from-teal-50 via-white to-teal-100/60 flex items-center justify-center overflow-hidden">
+                <div class="bg-white/[0.04] rounded-2xl overflow-hidden border border-white/[0.08] transition-all duration-300 hover:shadow-xl hover:border-teal-200/60 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-40 bg-gradient-to-br from-teal-500/10 via-transparent to-teal-500/5 flex items-center justify-center overflow-hidden">
                         <i class="fas fa-building text-4xl text-teal-500/70"></i>
                     </div>
                     <div class="p-6">
                         <div class="flex items-center gap-2 mb-3">
-                            <h3 class="text-xl font-bold text-slate-900">Normo</h3>
+                            <h3 class="text-xl font-bold text-white">Normo</h3>
                             <span class="text-[10px] font-bold uppercase tracking-widest text-amber-700 bg-amber-50 border border-amber-200/70 rounded-full px-2 py-0.5">In Progress</span>
                         </div>
-                        <p class="text-slate-600 mb-5 text-sm leading-relaxed">
+                        <p class="text-slate-400 mb-5 text-sm leading-relaxed">
                             AI system for analyzing Austrian building codes and legal documents. Multi-agent workflow (planner, retriever, summarizer) with smart LLM gate routing, RAG over 2,550+ pre-embedded vector chunks from 77 legal PDFs, and precise citations.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-teal-50 text-teal-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-teal-100">OpenAI</span>
-                            <span class="bg-teal-50 text-teal-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-teal-100">RAG</span>
-                            <span class="bg-teal-50 text-teal-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-teal-100">AI Agents</span>
-                            <span class="bg-teal-50 text-teal-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-teal-100">FastAPI</span>
-                            <span class="bg-teal-50 text-teal-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-teal-100">React</span>
-                            <span class="bg-teal-50 text-teal-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-teal-100">TypeScript</span>
-                            <span class="bg-teal-50 text-teal-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-teal-100">Python</span>
-                            <span class="bg-teal-50 text-teal-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-teal-100">ChromaDB</span>
-                            <span class="bg-teal-50 text-teal-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-teal-100">MongoDB</span>
-                            <span class="bg-teal-50 text-teal-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-teal-100">Docker</span>
+                            <span class="bg-teal-500/10 text-teal-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-teal-500/20">OpenAI</span>
+                            <span class="bg-teal-500/10 text-teal-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-teal-500/20">RAG</span>
+                            <span class="bg-teal-500/10 text-teal-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-teal-500/20">AI Agents</span>
+                            <span class="bg-teal-500/10 text-teal-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-teal-500/20">FastAPI</span>
+                            <span class="bg-teal-500/10 text-teal-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-teal-500/20">React</span>
+                            <span class="bg-teal-500/10 text-teal-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-teal-500/20">TypeScript</span>
+                            <span class="bg-teal-500/10 text-teal-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-teal-500/20">Python</span>
+                            <span class="bg-teal-500/10 text-teal-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-teal-500/20">ChromaDB</span>
+                            <span class="bg-teal-500/10 text-teal-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-teal-500/20">MongoDB</span>
+                            <span class="bg-teal-500/10 text-teal-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-teal-500/20">Docker</span>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Project 4: Lab Reports Data Extraction -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200/80 transition-all duration-300 hover:shadow-xl hover:border-blue-200/60 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
-                    <div class="h-40 bg-gradient-to-br from-blue-50 via-white to-blue-100/60 flex items-center justify-center overflow-hidden">
+                <div class="bg-white/[0.04] rounded-2xl overflow-hidden border border-white/[0.08] transition-all duration-300 hover:shadow-xl hover:border-blue-200/60 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-40 bg-gradient-to-br from-blue-500/10 via-transparent to-blue-500/5 flex items-center justify-center overflow-hidden">
                         <i class="fas fa-file-medical-alt text-4xl text-blue-500/70"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">Lab Report Data Extraction</h3>
-                        <p class="text-slate-600 mb-5 text-sm leading-relaxed">
+                        <h3 class="text-xl font-bold text-white mb-3">Lab Report Data Extraction</h3>
+                        <p class="text-slate-400 mb-5 text-sm leading-relaxed">
                             GPT-4o mini with custom prompts to extract structured data (type, value, unit, range) and metadata from lab reports. DevContainer + Poetry setup.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-blue-100">OpenAI</span>
-                            <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-blue-100">Python</span>
-                            <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-blue-100">DevContainer</span>
-                            <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-blue-100">Poetry</span>
+                            <span class="bg-blue-500/10 text-blue-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-blue-500/20">OpenAI</span>
+                            <span class="bg-blue-500/10 text-blue-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-blue-500/20">Python</span>
+                            <span class="bg-blue-500/10 text-blue-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-blue-500/20">DevContainer</span>
+                            <span class="bg-blue-500/10 text-blue-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-blue-500/20">Poetry</span>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Project 5: JO Service -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200/80 transition-all duration-300 hover:shadow-xl hover:border-purple-200/60 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="400">
-                    <div class="h-40 bg-gradient-to-br from-purple-50 via-white to-purple-100/60 flex items-center justify-center overflow-hidden">
+                <div class="bg-white/[0.04] rounded-2xl overflow-hidden border border-white/[0.08] transition-all duration-300 hover:shadow-xl hover:border-purple-200/60 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-40 bg-gradient-to-br from-purple-500/10 via-transparent to-purple-500/5 flex items-center justify-center overflow-hidden">
                         <i class="fas fa-mobile-alt text-4xl text-purple-500/70"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">JO Service</h3>
-                        <p class="text-slate-600 mb-5 text-sm leading-relaxed">
+                        <h3 class="text-xl font-bold text-white mb-3">JO Service</h3>
+                        <p class="text-slate-400 mb-5 text-sm leading-relaxed">
                             Flutter service marketplace with real-time chat (WebSocket), location-based matching, multi-role auth, and bilingual support. Node.js/Express + MongoDB backend.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-purple-50 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-purple-100">Flutter</span>
-                            <span class="bg-purple-50 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-purple-100">Node.js</span>
-                            <span class="bg-purple-50 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-purple-100">MongoDB</span>
-                            <span class="bg-purple-50 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-purple-100">WebSocket</span>
+                            <span class="bg-purple-500/10 text-purple-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-purple-500/20">Flutter</span>
+                            <span class="bg-purple-500/10 text-purple-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-purple-500/20">Node.js</span>
+                            <span class="bg-purple-500/10 text-purple-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-purple-500/20">MongoDB</span>
+                            <span class="bg-purple-500/10 text-purple-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-purple-500/20">WebSocket</span>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Project 6: Chat with Books -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200/80 transition-all duration-300 hover:shadow-xl hover:border-emerald-200/60 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="500">
-                    <div class="h-40 bg-gradient-to-br from-emerald-50 via-white to-emerald-100/60 flex items-center justify-center overflow-hidden">
+                <div class="bg-white/[0.04] rounded-2xl overflow-hidden border border-white/[0.08] transition-all duration-300 hover:shadow-xl hover:border-emerald-200/60 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="500">
+                    <div class="h-40 bg-gradient-to-br from-emerald-500/10 via-transparent to-emerald-500/5 flex items-center justify-center overflow-hidden">
                         <i class="fas fa-book text-4xl text-emerald-500/70"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">BookBuddy — Chat with Books</h3>
-                        <p class="text-slate-600 mb-5 text-sm leading-relaxed">
+                        <h3 class="text-xl font-bold text-white mb-3">BookBuddy — Chat with Books</h3>
+                        <p class="text-slate-400 mb-5 text-sm leading-relaxed">
                             AI-powered book companion — upload any book, then ask questions and get answers grounded in its content. Built with Streamlit and LangChain.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-emerald-50 text-emerald-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-emerald-100">LLM</span>
-                            <span class="bg-emerald-50 text-emerald-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-emerald-100">Streamlit</span>
-                            <span class="bg-emerald-50 text-emerald-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-emerald-100">LangChain</span>
-                            <span class="bg-emerald-50 text-emerald-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-emerald-100">Vector DB</span>
+                            <span class="bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-emerald-500/20">LLM</span>
+                            <span class="bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-emerald-500/20">Streamlit</span>
+                            <span class="bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-emerald-500/20">LangChain</span>
+                            <span class="bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-emerald-500/20">Vector DB</span>
                         </div>
                         </div>
                     </div>
                 </div>
                 
             <div class="text-center mt-16" data-aos="zoom-in" data-aos-delay="400">
-                <a href="https://github.com/amernajdawi" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white font-semibold py-3.5 px-8 rounded-xl transition-all duration-300 text-base shadow-sm hover:shadow-lg hover:shadow-indigo-200/40">
+                <a href="https://github.com/amernajdawi" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-semibold py-3.5 px-8 rounded-xl transition-all duration-300 text-base shadow-sm hover:shadow-lg hover:shadow-indigo-200/40">
                     <i class="fab fa-github"></i>
                     <span>View all on GitHub</span>
                 </a>
@@ -2135,102 +2136,102 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section-spacing bg-slate-50 border-t border-slate-200/60">
+    <section id="skills" class="section-spacing bg-[#030303] border-t border-white/[0.06]">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div class="text-center mb-20" data-aos="fade-up">
-                <div class="inline-block px-4 py-1 rounded-full border border-indigo-200/80 bg-white text-indigo-700 text-sm font-semibold mb-4 shadow-sm">Skills</div>
-                <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">
+                <div class="inline-block px-4 py-1 rounded-full border border-white/[0.08] bg-white/[0.03] text-indigo-400 text-sm font-semibold mb-4">Skills</div>
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">
                     <span class="relative">
                         <span class="relative z-10">Technical</span>
-                        <span class="absolute bottom-1 left-0 w-full h-3 bg-indigo-100 -z-10"></span>
+                        <span class="absolute bottom-1 left-0 w-full h-3 bg-indigo-500/20 -z-10"></span>
                     </span>
-                    <span class="text-indigo-600 ml-2">Skills</span>
+                    <span class="text-indigo-400 ml-2">Skills</span>
                 </h2>
-                <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
                     From research-grade AI to production systems—grouped by how I apply them in real projects.
                 </p>
             </div>
             
             <div class="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
-                <article class="rounded-2xl border border-slate-200/90 bg-gradient-to-br from-white via-slate-50/40 to-indigo-50/30 p-6 sm:p-8 shadow-sm hover:shadow-lg hover:border-indigo-200/70 transition-all duration-300" data-aos="fade-up" data-aos-delay="80">
+                <article class="rounded-2xl border border-white/[0.08] bg-gradient-to-br from-white/[0.03] via-transparent to-indigo-500/[0.03] p-6 sm:p-8 hover:shadow-lg hover:border-indigo-500/30 transition-all duration-300" data-aos="fade-up" data-aos-delay="80">
                     <div class="flex items-start gap-4 mb-5">
                         <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-lg shadow-indigo-500/30" aria-hidden="true">
                             <i class="fas fa-brain text-xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-lg font-bold text-slate-900 leading-tight">AI &amp; machine learning</h3>
+                            <h3 class="text-lg font-bold text-white leading-tight">AI &amp; machine learning</h3>
                             <p class="text-sm text-slate-500 mt-1">Models, agents, and intelligent products</p>
                         </div>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">AI/ML</span>
-                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">LLMs (Open &amp; Closed Source)</span>
-                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">NLP</span>
-                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">Computer Vision</span>
-                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">RAG</span>
-                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">AI Agents</span>
-                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">Prompt Engineering</span>
-                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">MCP</span>
-                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">Hugging Face</span>
-                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">LangChain</span>
-                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">Chatbots</span>
+                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">AI/ML</span>
+                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">LLMs (Open &amp; Closed Source)</span>
+                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">NLP</span>
+                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">Computer Vision</span>
+                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">RAG</span>
+                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">AI Agents</span>
+                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">Prompt Engineering</span>
+                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">MCP</span>
+                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">Hugging Face</span>
+                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">LangChain</span>
+                        <span class="inline-flex items-center rounded-full border border-indigo-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-indigo-300 hover:bg-indigo-50/80 transition-colors duration-200">Chatbots</span>
                     </div>
                 </article>
-                <article class="rounded-2xl border border-slate-200/90 bg-gradient-to-br from-white via-emerald-50/20 to-teal-50/30 p-6 sm:p-8 shadow-sm hover:shadow-lg hover:border-emerald-200/70 transition-all duration-300" data-aos="fade-up" data-aos-delay="120">
+                <article class="rounded-2xl border border-white/[0.08] bg-gradient-to-br from-white/[0.03] via-transparent to-emerald-500/[0.03] p-6 sm:p-8 hover:shadow-lg hover:border-emerald-500/30 transition-all duration-300" data-aos="fade-up" data-aos-delay="120">
                     <div class="flex items-start gap-4 mb-5">
                         <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-600 text-white shadow-lg shadow-emerald-500/30" aria-hidden="true">
                             <i class="fas fa-chart-line text-xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-lg font-bold text-slate-900 leading-tight">Data &amp; analytics</h3>
+                            <h3 class="text-lg font-bold text-white leading-tight">Data &amp; analytics</h3>
                             <p class="text-sm text-slate-500 mt-1">Pipelines, metrics, and insight</p>
                         </div>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="inline-flex items-center rounded-full border border-emerald-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-emerald-300 hover:bg-emerald-50/80 transition-colors duration-200">Python</span>
-                        <span class="inline-flex items-center rounded-full border border-emerald-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-emerald-300 hover:bg-emerald-50/80 transition-colors duration-200">NumPy</span>
-                        <span class="inline-flex items-center rounded-full border border-emerald-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-emerald-300 hover:bg-emerald-50/80 transition-colors duration-200">Pandas</span>
-                        <span class="inline-flex items-center rounded-full border border-emerald-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-emerald-300 hover:bg-emerald-50/80 transition-colors duration-200">spaCy</span>
-                        <span class="inline-flex items-center rounded-full border border-emerald-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-emerald-300 hover:bg-emerald-50/80 transition-colors duration-200">Data Processing</span>
-                        <span class="inline-flex items-center rounded-full border border-emerald-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-emerald-300 hover:bg-emerald-50/80 transition-colors duration-200">KPI Analysis</span>
-                        <span class="inline-flex items-center rounded-full border border-emerald-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-emerald-300 hover:bg-emerald-50/80 transition-colors duration-200">Web Scraping</span>
-                        <span class="inline-flex items-center rounded-full border border-emerald-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-emerald-300 hover:bg-emerald-50/80 transition-colors duration-200">Data Visualization</span>
+                        <span class="inline-flex items-center rounded-full border border-emerald-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-emerald-300 hover:bg-emerald-50/80 transition-colors duration-200">Python</span>
+                        <span class="inline-flex items-center rounded-full border border-emerald-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-emerald-300 hover:bg-emerald-50/80 transition-colors duration-200">NumPy</span>
+                        <span class="inline-flex items-center rounded-full border border-emerald-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-emerald-300 hover:bg-emerald-50/80 transition-colors duration-200">Pandas</span>
+                        <span class="inline-flex items-center rounded-full border border-emerald-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-emerald-300 hover:bg-emerald-50/80 transition-colors duration-200">spaCy</span>
+                        <span class="inline-flex items-center rounded-full border border-emerald-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-emerald-300 hover:bg-emerald-50/80 transition-colors duration-200">Data Processing</span>
+                        <span class="inline-flex items-center rounded-full border border-emerald-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-emerald-300 hover:bg-emerald-50/80 transition-colors duration-200">KPI Analysis</span>
+                        <span class="inline-flex items-center rounded-full border border-emerald-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-emerald-300 hover:bg-emerald-50/80 transition-colors duration-200">Web Scraping</span>
+                        <span class="inline-flex items-center rounded-full border border-emerald-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-emerald-300 hover:bg-emerald-50/80 transition-colors duration-200">Data Visualization</span>
                     </div>
                 </article>
-                <article class="rounded-2xl border border-slate-200/90 bg-gradient-to-br from-white via-amber-50/25 to-orange-50/20 p-6 sm:p-8 shadow-sm hover:shadow-lg hover:border-amber-200/70 transition-all duration-300" data-aos="fade-up" data-aos-delay="160">
+                <article class="rounded-2xl border border-white/[0.08] bg-gradient-to-br from-white/[0.03] via-transparent to-amber-500/[0.03] p-6 sm:p-8 hover:shadow-lg hover:border-amber-500/30 transition-all duration-300" data-aos="fade-up" data-aos-delay="160">
                     <div class="flex items-start gap-4 mb-5">
                         <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-amber-600 text-white shadow-lg shadow-amber-500/30" aria-hidden="true">
                             <i class="fas fa-database text-xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-lg font-bold text-slate-900 leading-tight">Databases &amp; APIs</h3>
+                            <h3 class="text-lg font-bold text-white leading-tight">Databases &amp; APIs</h3>
                             <p class="text-sm text-slate-500 mt-1">Storage, integration, and testing</p>
                         </div>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="inline-flex items-center rounded-full border border-amber-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-amber-300 hover:bg-amber-50/80 transition-colors duration-200">PostgreSQL</span>
-                        <span class="inline-flex items-center rounded-full border border-amber-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-amber-300 hover:bg-amber-50/80 transition-colors duration-200">MongoDB</span>
-                        <span class="inline-flex items-center rounded-full border border-amber-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-amber-300 hover:bg-amber-50/80 transition-colors duration-200">APIs</span>
-                        <span class="inline-flex items-center rounded-full border border-amber-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-amber-300 hover:bg-amber-50/80 transition-colors duration-200">Postman</span>
+                        <span class="inline-flex items-center rounded-full border border-amber-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-amber-300 hover:bg-amber-50/80 transition-colors duration-200">PostgreSQL</span>
+                        <span class="inline-flex items-center rounded-full border border-amber-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-amber-300 hover:bg-amber-50/80 transition-colors duration-200">MongoDB</span>
+                        <span class="inline-flex items-center rounded-full border border-amber-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-amber-300 hover:bg-amber-50/80 transition-colors duration-200">APIs</span>
+                        <span class="inline-flex items-center rounded-full border border-amber-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-amber-300 hover:bg-amber-50/80 transition-colors duration-200">Postman</span>
                     </div>
                 </article>
-                <article class="rounded-2xl border border-slate-200/90 bg-gradient-to-br from-white via-slate-100/40 to-violet-50/35 p-6 sm:p-8 shadow-sm hover:shadow-lg hover:border-violet-200/70 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                <article class="rounded-2xl border border-white/[0.08] bg-gradient-to-br from-white/[0.03] via-transparent to-violet-500/[0.03] p-6 sm:p-8 hover:shadow-lg hover:border-violet-500/30 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex items-start gap-4 mb-5">
                         <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-violet-600 text-white shadow-lg shadow-violet-500/30" aria-hidden="true">
                             <i class="fas fa-cloud text-xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-lg font-bold text-slate-900 leading-tight">Engineering &amp; delivery</h3>
+                            <h3 class="text-lg font-bold text-white leading-tight">Engineering &amp; delivery</h3>
                             <p class="text-sm text-slate-500 mt-1">Ship, scale, and automate</p>
                         </div>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="inline-flex items-center rounded-full border border-violet-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-violet-300 hover:bg-violet-50/80 transition-colors duration-200">Git</span>
-                        <span class="inline-flex items-center rounded-full border border-violet-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-violet-300 hover:bg-violet-50/80 transition-colors duration-200">Docker</span>
-                        <span class="inline-flex items-center rounded-full border border-violet-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-violet-300 hover:bg-violet-50/80 transition-colors duration-200">DevOps</span>
-                        <span class="inline-flex items-center rounded-full border border-violet-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-violet-300 hover:bg-violet-50/80 transition-colors duration-200">Cloud Applications</span>
-                        <span class="inline-flex items-center rounded-full border border-violet-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-violet-300 hover:bg-violet-50/80 transition-colors duration-200">Automation</span>
-                        <span class="inline-flex items-center rounded-full border border-violet-100 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-slate-800 shadow-sm hover:border-violet-300 hover:bg-violet-50/80 transition-colors duration-200">Web Development</span>
+                        <span class="inline-flex items-center rounded-full border border-violet-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-violet-300 hover:bg-violet-50/80 transition-colors duration-200">Git</span>
+                        <span class="inline-flex items-center rounded-full border border-violet-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-violet-300 hover:bg-violet-50/80 transition-colors duration-200">Docker</span>
+                        <span class="inline-flex items-center rounded-full border border-violet-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-violet-300 hover:bg-violet-50/80 transition-colors duration-200">DevOps</span>
+                        <span class="inline-flex items-center rounded-full border border-violet-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-violet-300 hover:bg-violet-50/80 transition-colors duration-200">Cloud Applications</span>
+                        <span class="inline-flex items-center rounded-full border border-violet-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-violet-300 hover:bg-violet-50/80 transition-colors duration-200">Automation</span>
+                        <span class="inline-flex items-center rounded-full border border-violet-100 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold text-white/70 shadow-sm hover:border-violet-300 hover:bg-violet-50/80 transition-colors duration-200">Web Development</span>
                     </div>
                 </article>
             </div>
@@ -2238,7 +2239,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section-spacing bg-gradient-to-br from-indigo-700 via-indigo-800 to-slate-900 text-white border-t border-indigo-600/30" role="region" aria-label="Contact me">
+    <section id="contact" class="section-spacing bg-[#030303] text-white border-t border-white/[0.06]" role="region" aria-label="Contact me">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div class="md:flex items-center justify-between">
                 <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right" data-aos-delay="100">
@@ -2288,25 +2289,25 @@
                     </div>
                 </div>
                 <div class="md:w-1/2 md:pl-12" data-aos="fade-left" data-aos-delay="150">
-                    <div class="bg-white rounded-2xl shadow-2xl shadow-slate-900/20 border border-slate-100 p-8 text-slate-900">
-                        <h3 class="text-2xl font-bold mb-2 text-slate-900">Send a message</h3>
-                        <p class="text-slate-500 text-sm mb-6">I typically reply within a few business days.</p>
+                    <div class="bg-white/[0.04] border border-white/[0.08] rounded-2xl p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-2 text-white">Send a message</h3>
+                        <p class="text-slate-400 text-sm mb-6">I typically reply within a few business days.</p>
                         <form id="contactForm">
                             <div class="mb-6">
-                                <label for="name" class="block text-slate-700 font-medium mb-2">Name</label>
-                                <input type="text" id="name" name="name" class="contact-input w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-indigo-600 focus:border-transparent" placeholder="Your name" required aria-required="true">
+                                <label for="name" class="block text-slate-300 font-medium mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="contact-input w-full px-4 py-3 border border-white/[0.1] bg-white/[0.05] text-white rounded-xl focus:ring-2 focus:ring-indigo-600 focus:border-transparent" placeholder="Your name" required aria-required="true">
                             </div>
                             <div class="mb-6">
-                                <label for="email" class="block text-slate-700 font-medium mb-2">Email</label>
-                                <input type="email" id="email" name="email" class="contact-input w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-indigo-600 focus:border-transparent" placeholder="Your email" required aria-required="true">
+                                <label for="email" class="block text-slate-300 font-medium mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="contact-input w-full px-4 py-3 border border-white/[0.1] bg-white/[0.05] text-white rounded-xl focus:ring-2 focus:ring-indigo-600 focus:border-transparent" placeholder="Your email" required aria-required="true">
                             </div>
                             <div class="mb-6">
-                                <label for="subject" class="block text-slate-700 font-medium mb-2">Subject</label>
-                                <input type="text" id="subject" name="subject" class="contact-input w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-indigo-600 focus:border-transparent" placeholder="Subject">
+                                <label for="subject" class="block text-slate-300 font-medium mb-2">Subject</label>
+                                <input type="text" id="subject" name="subject" class="contact-input w-full px-4 py-3 border border-white/[0.1] bg-white/[0.05] text-white rounded-xl focus:ring-2 focus:ring-indigo-600 focus:border-transparent" placeholder="Subject">
                             </div>
                             <div class="mb-6">
-                                <label for="message" class="block text-slate-700 font-medium mb-2">Message</label>
-                                <textarea id="message" name="message" rows="4" class="contact-input w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-indigo-600 focus:border-transparent" placeholder="Your message" required aria-required="true"></textarea>
+                                <label for="message" class="block text-slate-300 font-medium mb-2">Message</label>
+                                <textarea id="message" name="message" rows="4" class="contact-input w-full px-4 py-3 border border-white/[0.1] bg-white/[0.05] text-white rounded-xl focus:ring-2 focus:ring-indigo-600 focus:border-transparent" placeholder="Your message" required aria-required="true"></textarea>
                             </div>
                             <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-xl transition duration-300 flex items-center justify-center shadow-lg shadow-indigo-900/20">
                                 <span>Send Message</span>
@@ -2326,7 +2327,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 text-white py-14 border-t border-slate-800/80" role="contentinfo">
+    <footer class="bg-[#030303] text-white py-14 border-t border-white/[0.06]" role="contentinfo">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8">
                 <div class="flex flex-col items-center md:items-start" data-aos="fade-right">
