@@ -75,9 +75,97 @@
         }
         
         .gradient-bg {
-            background: linear-gradient(155deg, #0f172a 0%, #1e1b4b 42%, #312e81 78%, #1e3a5f 100%);
+            background: #030303;
             position: relative;
             overflow: hidden;
+        }
+
+        .gradient-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(3,3,3,0.8) 0%, transparent 30%, transparent 70%, rgba(3,3,3,1) 100%);
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .hero-gradient-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom right, rgba(99,102,241,0.05), transparent, rgba(244,63,94,0.05));
+            filter: blur(48px);
+            z-index: 0;
+        }
+
+        .elegant-shape {
+            position: absolute;
+            opacity: 0;
+            animation: shapeEntrance 2.4s cubic-bezier(0.23, 0.86, 0.39, 0.96) forwards;
+        }
+
+        .elegant-shape-inner {
+            position: relative;
+            animation: shapeFloat 12s ease-in-out infinite;
+        }
+
+        .elegant-shape-pill {
+            position: absolute;
+            inset: 0;
+            border-radius: 9999px;
+            background-size: 100%;
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(2px);
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .elegant-shape-pill::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 9999px;
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.2), transparent 70%);
+        }
+
+        .shape-indigo .elegant-shape-pill {
+            background: linear-gradient(to right, rgba(99,102,241,0.15), transparent);
+        }
+        .shape-rose .elegant-shape-pill {
+            background: linear-gradient(to right, rgba(244,63,94,0.15), transparent);
+        }
+        .shape-violet .elegant-shape-pill {
+            background: linear-gradient(to right, rgba(139,92,246,0.15), transparent);
+        }
+        .shape-amber .elegant-shape-pill {
+            background: linear-gradient(to right, rgba(245,158,11,0.15), transparent);
+        }
+        .shape-cyan .elegant-shape-pill {
+            background: linear-gradient(to right, rgba(6,182,212,0.15), transparent);
+        }
+
+        .shape-delay-1 { animation-delay: 0.3s; }
+        .shape-delay-2 { animation-delay: 0.5s; }
+        .shape-delay-3 { animation-delay: 0.4s; }
+        .shape-delay-4 { animation-delay: 0.6s; }
+        .shape-delay-5 { animation-delay: 0.7s; }
+
+        @keyframes shapeEntrance {
+            0% {
+                opacity: 0;
+                transform: translateY(-150px);
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes shapeFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(15px); }
         }
         
         .nav-glass {
@@ -101,9 +189,9 @@
             position: absolute;
             inset: -2px;
             border-radius: 1.15rem;
-            background: linear-gradient(135deg, rgba(34, 211, 238, 0.35), rgba(99, 102, 241, 0.4), rgba(129, 140, 248, 0.2));
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.5), rgba(244, 63, 94, 0.3), rgba(139, 92, 246, 0.4));
             z-index: 0;
-            opacity: 0.85;
+            opacity: 0.9;
         }
         
         .hero-photo-inner {
@@ -127,20 +215,10 @@
         
         .hero-content {
             position: relative;
-            z-index: 2;
+            z-index: 3;
         }
         
-        .gradient-bg::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(ellipse 70% 50% at 20% 30%, rgba(99, 102, 241, 0.15) 0%, transparent 55%),
-                        radial-gradient(ellipse 60% 45% at 85% 70%, rgba(34, 211, 238, 0.08) 0%, transparent 50%);
-            pointer-events: none;
-        }
+        
         
         .service-card:hover {
             transform: translateY(-10px);
@@ -1542,7 +1620,43 @@
 
     <!-- Hero Section -->
     <section id="home" class="gradient-bg text-white pt-28 pb-20 md:pt-36 md:pb-28">
+        <div class="hero-gradient-overlay"></div>
         <div id="particles-js"></div>
+
+        <!-- Elegant floating shapes background -->
+        <div class="absolute inset-0 overflow-hidden" style="z-index: 1;">
+            <!-- Shape 1: Large indigo, top-left -->
+            <div class="elegant-shape shape-delay-1" style="left: -10%; top: 15%; transform: rotate(12deg);">
+                <div class="elegant-shape-inner" style="width: 600px; height: 140px;">
+                    <div class="elegant-shape-pill shape-indigo"></div>
+                </div>
+            </div>
+            <!-- Shape 2: Rose, bottom-right -->
+            <div class="elegant-shape shape-delay-2" style="right: -5%; top: 70%; transform: rotate(-15deg);">
+                <div class="elegant-shape-inner" style="width: 500px; height: 120px;">
+                    <div class="elegant-shape-pill shape-rose"></div>
+                </div>
+            </div>
+            <!-- Shape 3: Violet, bottom-left -->
+            <div class="elegant-shape shape-delay-3" style="left: 5%; bottom: 5%; transform: rotate(-8deg);">
+                <div class="elegant-shape-inner" style="width: 300px; height: 80px;">
+                    <div class="elegant-shape-pill shape-violet"></div>
+                </div>
+            </div>
+            <!-- Shape 4: Amber, top-right -->
+            <div class="elegant-shape shape-delay-4" style="right: 15%; top: 10%; transform: rotate(20deg);">
+                <div class="elegant-shape-inner" style="width: 200px; height: 60px;">
+                    <div class="elegant-shape-pill shape-amber"></div>
+                </div>
+            </div>
+            <!-- Shape 5: Cyan, top-left area -->
+            <div class="elegant-shape shape-delay-5" style="left: 20%; top: 5%; transform: rotate(-25deg);">
+                <div class="elegant-shape-inner" style="width: 150px; height: 40px;">
+                    <div class="elegant-shape-pill shape-cyan"></div>
+                </div>
+            </div>
+        </div>
+
         <div class="hero-content">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div class="md:flex md:items-center md:justify-between md:gap-8 lg:gap-12">
@@ -2374,13 +2488,13 @@ ${message}`;
         // Initialize particles.js
         particlesJS('particles-js', {
             particles: {
-                number: { value: 56, density: { enable: true, value_area: 900 } },
-                color: { value: "#a5b4fc" },
+                number: { value: 40, density: { enable: true, value_area: 1000 } },
+                color: { value: "#818cf8" },
                 shape: { type: "circle" },
-                opacity: { value: 0.35, random: true },
-                size: { value: 2, random: true },
-                line_linked: { enable: true, distance: 140, color: "#22d3ee", opacity: 0.12, width: 1 },
-                move: { enable: true, speed: 1, direction: "none", random: false, straight: false }
+                opacity: { value: 0.2, random: true },
+                size: { value: 1.5, random: true },
+                line_linked: { enable: true, distance: 120, color: "#6366f1", opacity: 0.06, width: 0.8 },
+                move: { enable: true, speed: 0.6, direction: "none", random: true, straight: false }
             },
             interactivity: {
                 detect_on: "canvas",
